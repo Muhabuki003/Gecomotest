@@ -472,7 +472,7 @@
   <div class="faq-item">
     <details>
       <summary>Will it work on my skin tone / hair color?<span class="chev">⌄</span></summary>
-      <div class="body">The kit comes in two two-tone shade combos — Dark Gray + Light Brown for black, dark brown and cool-toned hair, and Light Brown + Bright Brown for blonde, light brown and warm-toned hair. Each compact layers both shades so it blends into a wide range of tones.</div>
+      <div class="body">The kit comes in two shades — Dark Brown for black, dark brown and cool-toned hair, and Light Brown for blonde, light brown and warm-toned hair. Each compact layers a lighter front and deeper tail shade, so it blends into a wide range of tones.</div>
     </details>
   </div>
   <div class="faq-item">
@@ -547,13 +547,13 @@
   // dark pattern of a countdown that silently resets for every visitor.
   var SALE_END = new Date('2026-07-31T23:59:59-05:00').getTime();
 
-  // Each shade maps 1:1 to a Shopify variant. Display names are cleaned up
-  // for customers; variantId pins the exact variant so checkout never
-  // depends on the supplier's raw titles ("01Dark gray  light brown", …).
+  // Each shade maps 1:1 to a Shopify variant, pinned by variantId so
+  // checkout never depends on variant titles. Keep these names in sync
+  // with the variant names in Shopify admin.
   var SHADES = [
-    { name: 'Dark Gray + Light Brown', hex: '#6B5D52', desc: 'Black, dark brown & cool-toned hair',
+    { name: 'Dark Brown', hex: '#5C4A3D', desc: 'Black, dark brown & cool-toned hair',
       variantId: 'gid://shopify/ProductVariant/53718556148026' },
-    { name: 'Light Brown + Bright Brown', hex: '#A97B50', desc: 'Blonde, light brown & warm-toned hair',
+    { name: 'Light Brown', hex: '#A97B50', desc: 'Blonde, light brown & warm-toned hair',
       variantId: 'gid://shopify/ProductVariant/53718556180794' }
   ];
 
