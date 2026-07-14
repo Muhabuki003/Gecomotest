@@ -3,948 +3,180 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GECOMO — Natural Eyebrows in 10 Seconds</title>
-<meta name="description" content="GECOMO Double Seal eyebrow powder stamp — salon-shaped, natural-looking brows in 10 seconds. No pencil skills required. 60-day guarantee.">
+<title>GECOMO — Effortless, Natural Brows</title>
+<meta name="description" content="GECOMO makes natural-looking brows effortless. Shop the Double Seal brow stamp and the waterproof dual-ended brow pencil — salon-quality brows in seconds, 60-day guarantee.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23FAF6F1'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%231C1712'%3EG%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --cream:#FAF6F1; --cream-2:#F2EAE0; --ink:#1C1712; --ink-2:#2E261F;
-    --brown:#8A7057; --brown-dark:#6E5843; --brown-light:#A0866B;
-    --border:#E8DFD3; --border-2:#E0D3C2; --muted:#9A8B7C; --body:#4A4038;
-    --gold:#D9A356; --gold-dark:#B9873F; --white:#FFFFFF;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Jost','Helvetica Neue',sans-serif;-webkit-font-smoothing:antialiased;}
-  h1,h2,h3{font-family:'Marcellus',serif;font-weight:400;margin:0;}
-  p{margin:0;}
-  a{color:var(--brown);text-decoration:none;}
-  img,video{max-width:100%;display:block;}
-  button{font-family:inherit;cursor:pointer;}
-  .eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--brown);margin:0 0 12px;}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 28px;}
-  .wrap-narrow{max-width:760px;margin:0 auto;padding:0 28px;}
-  .btn{display:inline-block;border:none;border-radius:999px;padding:16px 34px;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .1s;}
-  .btn:active{transform:scale(.98);}
-  .btn-gold{background:var(--gold);color:var(--ink);}
-  .btn-gold:hover{background:var(--gold-dark);}
-  .btn-dark{background:var(--ink);color:var(--cream);}
-  .btn-dark:hover{background:var(--brown);}
-  .card{background:var(--white);border:1px solid var(--border);border-radius:18px;}
-  details summary{list-style:none;cursor:pointer;}
-  details summary::-webkit-details-marker{display:none;}
-  .chev{transition:transform .2s;}
-  details[open] .chev{transform:rotate(180deg);}
-  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-  /* Sticky top stack: sale bar -> tagline -> nav */
-  #saleBar{position:sticky;top:0;z-index:60;background:var(--ink);color:var(--cream);text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.06em;}
-  #saleBar strong{background:rgba(217,163,86,.22);border:1px solid var(--gold);border-radius:6px;padding:2px 9px;font-variant-numeric:tabular-nums;margin:0 2px;}
-  #tagline{position:sticky;top:38px;z-index:59;background:var(--cream);text-align:center;padding:7px 16px;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);}
-  nav{position:sticky;top:70px;z-index:58;background:rgba(250,246,241,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:12px 28px;}
-  .logo{display:flex;align-items:center;gap:10px;font-family:'Marcellus',serif;font-size:21px;letter-spacing:.28em;color:var(--ink);}
-  .navlinks{display:flex;align-items:center;gap:26px;}
-  .navlinks a{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);}
-  .navlinks a:hover{color:var(--brown);}
-  #cartBtn{position:relative;background:var(--ink);color:var(--cream);border:none;border-radius:999px;padding:11px 22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;}
-  #cartBtn:hover{background:var(--brown);}
-  @media (max-width:640px){ .navlinks a{display:none;} }
-
-  /* Hero */
-  header#top{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--ink);}
-  header#top video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;}
-  header#top .scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(28,23,18,.35),rgba(28,23,18,.7));}
-  .hero-copy{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:120px 24px 80px;gap:0;}
-  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(250,246,241,.14);border:1px solid rgba(250,246,241,.35);backdrop-filter:blur(8px);border-radius:999px;padding:7px 16px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#F5EEE5;}
-  .hero-copy h1{font-size:clamp(38px,6vw,68px);line-height:1.08;margin:24px 0 18px;color:#FBF7F1;max-width:820px;text-shadow:0 2px 24px rgba(28,23,18,.4);}
-  .hero-copy p{font-size:18px;line-height:1.6;color:#EFE6DA;margin:0 0 30px;max-width:520px;text-shadow:0 1px 12px rgba(28,23,18,.4);}
-  .hero-cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;}
-  .hero-cta span{font-size:14px;color:#EFE6DA;}
-
-  /* Marquee trust strip */
-  .marquee-wrap{background:var(--ink);overflow:hidden;padding:14px 0;}
-  .marquee{display:flex;gap:64px;white-space:nowrap;width:max-content;animation:marquee 24s linear infinite;color:#C9B49E;font-size:14px;letter-spacing:.18em;text-transform:uppercase;}
-
-  /* Buy section (Browfi-style stacked conversion block) */
-  #buy{background:var(--cream-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:64px 0 76px;}
-  .buy-grid{display:flex;flex-wrap:wrap;gap:48px;}
-  .buy-media{flex:1 1 400px;min-width:280px;}
-  .buy-media .card{overflow:hidden;}
-  .buy-media img{width:100%;aspect-ratio:1/1;object-fit:cover;}
-  .buy-content{flex:1 1 440px;min-width:300px;}
-  .buy-content h1.pdp-title{font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 16px;}
-  .feature-list{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px;}
-  .feature-list li{display:flex;gap:10px;align-items:flex-start;font-size:16px;color:var(--ink-2);}
-  .feature-list li b{color:var(--ink);}
-  .divider-label{display:flex;align-items:center;gap:14px;margin:28px 0 18px;color:var(--ink);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;}
-  .divider-label::before,.divider-label::after{content:'';flex:1;height:1px;background:var(--border-2);}
-
-  .bundle{display:block;width:100%;text-align:left;background:var(--white);border:2px solid var(--border-2);border-radius:16px;padding:16px 18px;margin-bottom:12px;position:relative;}
-  .bundle.selected{border-color:var(--brown);box-shadow:0 6px 18px rgba(138,112,87,.18);}
-  .bundle-top{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;}
-  .bundle-left{display:flex;align-items:center;gap:10px;}
-  .radio{width:18px;height:18px;border-radius:999px;border:2px solid var(--muted);flex:0 0 auto;box-sizing:border-box;position:relative;}
-  .bundle.selected .radio{border-color:var(--brown);}
-  .bundle.selected .radio::after{content:'';position:absolute;inset:3px;border-radius:999px;background:var(--brown);}
-  .bundle-title{font-weight:600;font-size:15px;}
-  .save-pill{background:#F4E9DC;color:var(--brown-dark);font-size:11px;font-weight:600;letter-spacing:.04em;border-radius:999px;padding:3px 10px;}
-  .bundle-price{text-align:right;}
-  .bundle-price .now{font-weight:700;font-size:16px;}
-  .bundle-price .was{font-size:12px;color:var(--muted);text-decoration:line-through;margin-left:6px;}
-  .ribbon{position:absolute;top:-13px;right:16px;background:var(--ink);color:var(--cream);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:4px 12px;}
-  .bundle-extra{margin-top:12px;padding-top:12px;border-top:1px dashed var(--border-2);display:grid;gap:8px;}
-  .bundle-extra .line{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--brown-dark);}
-  .bundle-extra .line .val{color:var(--muted);text-decoration:line-through;}
-  .shade-row{display:grid;gap:8px;margin-top:12px;}
-  .shade-row label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--body);display:flex;align-items:center;gap:8px;}
-  .shade-row select{flex:1;padding:8px 10px;border-radius:8px;border:1px solid var(--border-2);background:var(--white);font-family:inherit;font-size:14px;}
-
-  .swatch-row{display:flex;gap:12px;margin:8px 0 4px;}
-  .swatch{width:38px;height:38px;border-radius:999px;cursor:pointer;box-sizing:border-box;border:3px solid var(--border-2);padding:0;}
-  .swatch.selected{border-color:var(--ink);box-shadow:0 0 0 3px var(--cream-2),0 0 0 5px var(--brown);}
-
-  .protection{display:flex;align-items:center;gap:10px;margin:18px 0;font-size:14px;color:var(--body);}
-  .protection input{width:18px;height:18px;accent-color:var(--brown);}
-
-  #addToCart{width:100%;padding:19px;font-size:17px;}
-  .guarantee-row{display:flex;justify-content:center;gap:22px;margin-top:14px;font-size:13px;color:var(--brown-dark);flex-wrap:wrap;}
-
-  /* mini testimonial carousel */
-  .mini-carousel{margin-top:30px;background:var(--white);border:1px solid var(--border);border-radius:16px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;}
-  .avatar{width:40px;height:40px;border-radius:999px;background:var(--brown);color:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;flex:0 0 auto;}
-  .mini-carousel-text q{font-size:15px;line-height:1.5;color:var(--ink-2);}
-  .mini-carousel-name{font-size:13px;color:var(--muted);margin-top:6px;}
-  .dots{display:flex;gap:6px;margin-top:10px;}
-  .dot{width:6px;height:6px;border-radius:999px;background:var(--border-2);border:none;padding:0;}
-  .dot.active{background:var(--brown);width:16px;transition:width .2s;}
-
-  /* Demo / stamp-on section */
-  #demo{max-width:1100px;margin:0 auto;padding:88px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:48px;}
-  #demo .card{flex:1 1 420px;min-width:280px;overflow:hidden;}
-  #demo video{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;}
-  #demo .copy{flex:1 1 360px;min-width:280px;}
-  .stat-row{display:flex;gap:32px;margin-top:26px;flex-wrap:wrap;}
-  .stat b{display:block;font-family:'Marcellus',serif;font-size:30px;color:var(--ink);}
-  .stat span{font-size:13px;color:var(--muted);letter-spacing:.04em;}
-
-  /* Shade finder */
-  #shades{max-width:1100px;margin:0 auto;padding:20px 28px 88px;text-align:center;}
-  .shade-box{max-width:640px;margin:0 auto;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:32px;text-align:left;}
-  .shade-box h3{font-size:22px;margin-bottom:8px;}
-  .shade-box>p{color:var(--body);line-height:1.6;margin-bottom:6px;}
-  .shade-item{display:flex;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--border);}
-  .shade-item:first-of-type{border-top:none;margin-top:14px;}
-  .shade-item .swatch-lg{width:56px;height:56px;border-radius:12px;flex:0 0 auto;}
-  .shade-item h4{font-size:16px;margin:0 0 4px;}
-  .shade-item p{font-size:14px;color:var(--body);margin:0;}
-
-  /* Free guide bonus section */
-  #guide{background:var(--cream-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-  .guide-top{max-width:640px;margin:0 auto;padding:72px 28px 52px;text-align:center;}
-  .guide-kicker{display:flex;align-items:center;gap:14px;justify-content:center;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);margin:0 0 18px;}
-  .guide-kicker::before,.guide-kicker::after{content:'';flex:0 0 40px;height:1px;background:var(--ink);}
-  .guide-headline{font-family:'Marcellus',serif;font-size:clamp(52px,9vw,92px);line-height:.95;color:var(--ink);margin:0 0 22px;}
-  .guide-pill{display:inline-block;background:var(--ink);color:var(--cream);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-radius:6px;padding:10px 20px;margin-bottom:22px;}
-  .guide-sub{font-family:'Marcellus',serif;font-size:clamp(24px,3.5vw,32px);color:var(--ink);margin:0 0 40px;}
-  .guide-sub em{font-style:italic;color:var(--brown);}
-  .guide-visual{display:flex;justify-content:center;}
-  .book{width:240px;aspect-ratio:3/4.4;background:linear-gradient(135deg,#FBF8F3,#EDE2D2);border-radius:4px 10px 10px 4px;box-shadow:10px 10px 0 rgba(28,23,18,.12),0 24px 50px rgba(28,23,18,.3);position:relative;transform:rotate(-3deg);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;}
-  .book::before{content:'';position:absolute;left:0;top:0;bottom:0;width:12px;background:rgba(28,23,18,.15);z-index:2;}
-  .book-top{padding:30px 24px 20px;text-align:center;}
-  .book-swoosh{display:block;font-size:20px;color:var(--brown);margin-bottom:8px;}
-  .book-brand{font-family:'Marcellus',serif;font-size:18px;letter-spacing:.1em;color:var(--ink);}
-  .book-brand span{display:block;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--brown-dark);margin-top:4px;}
-  .book-title{font-family:'Marcellus',serif;color:var(--ink);margin-top:16px;font-size:14px;font-style:italic;}
-  .book-title em{display:block;font-style:normal;font-size:26px;line-height:1.15;margin-top:4px;}
-  .book-divider{width:32px;height:1px;background:var(--border-2);margin:14px auto;}
-  .book-subtitle{font-size:13px;color:var(--ink-2);}
-  .book-tagline{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--brown);margin-top:10px;}
-  .book-band{background:var(--ink);color:var(--cream);font-size:11px;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:14px;border:1px solid rgba(250,246,241,.35);margin:0 18px 20px;border-radius:2px;}
-  .guide-bottom{background:var(--ink);color:var(--cream);padding:56px 28px 64px;text-align:center;}
-  .gift-icon{width:64px;height:64px;border-radius:999px;border:1.5px solid rgba(250,246,241,.4);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 22px;}
-  .guide-bottom h3{font-size:clamp(19px,2.4vw,23px);letter-spacing:.02em;color:#FBF7F1;max-width:420px;margin:0 auto 16px;}
-  .guide-bottom p.desc{color:#D8CBBB;line-height:1.7;font-size:15px;max-width:420px;margin:0 auto 22px;}
-  .guide-rule{width:100%;max-width:420px;height:1px;background:rgba(250,246,241,.18);margin:0 auto 18px;}
-  .value-line{font-size:13px;letter-spacing:.04em;color:#D8CBBB;margin:0 0 26px;}
-  .value-line strong{color:var(--gold);}
-
-  /* Accordion group */
-  #included{max-width:760px;margin:0 auto;padding:88px 28px;}
-  .acc-item{background:var(--white);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;}
-  .acc-item summary{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;font-weight:600;font-size:16px;}
-  .acc-item .summary-left{display:flex;align-items:center;gap:12px;}
-  .acc-item .body{padding:0 22px 20px;color:var(--body);line-height:1.65;}
-
-  /* dark info banner */
-  .info-banner{background:var(--brown-dark);color:var(--cream);text-align:center;padding:16px;font-size:14px;letter-spacing:.04em;display:flex;justify-content:center;gap:36px;flex-wrap:wrap;}
-
-  /* reviews */
-  #reviews{max-width:1100px;margin:0 auto;padding:88px 28px;}
-  .reviews-head{text-align:center;margin-bottom:32px;}
-  .stars-lg{color:var(--brown);letter-spacing:3px;font-size:20px;}
-  #writeReview{margin:18px auto 0;display:block;background:var(--white);border:1px solid var(--border-2);border-radius:999px;padding:13px 28px;font-size:14px;font-weight:600;letter-spacing:.04em;}
-  #writeReview:hover{background:var(--cream-2);}
-  .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:36px;}
-  .review-card{background:var(--white);border:1px solid var(--border);border-radius:18px;padding:24px;}
-  .review-card .rhead{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
-  .review-card .rname{font-weight:600;font-size:14px;}
-  .review-card .rdate{font-size:12px;color:var(--muted);}
-  .review-card .rstars{color:var(--brown);letter-spacing:2px;margin:8px 0 10px;}
-  .review-card blockquote{margin:0;font-size:15px;line-height:1.6;color:var(--ink-2);}
-
-  /* before/after slider */
-  /* guarantee band */
-  #guarantee{background:var(--ink);color:var(--cream);text-align:center;padding:80px 28px;}
-  #guarantee h2{font-size:clamp(28px,3.5vw,40px);margin-bottom:14px;color:#FBF7F1;}
-  #guarantee p{max-width:520px;margin:0 auto 28px;color:#C9B49E;line-height:1.7;}
-
-  /* FAQ */
-  #faq{max-width:760px;margin:0 auto;padding:88px 28px;}
-  #faq h2{text-align:center;margin-bottom:36px;font-size:clamp(28px,3.5vw,38px);}
-  .faq-item{background:var(--ink);color:var(--cream);border-radius:14px;margin-bottom:12px;overflow:hidden;}
-  .faq-item summary{padding:19px 24px;font-weight:500;font-size:16px;display:flex;justify-content:space-between;align-items:center;}
-  .faq-item .body{padding:0 24px 20px;color:#C9B49E;line-height:1.65;}
-
-  footer{border-top:1px solid var(--border);padding:48px 28px 130px;text-align:center;}
-  footer .logo{justify-content:center;margin-bottom:16px;}
-  .foot-links{display:flex;justify-content:center;gap:24px;font-size:14px;margin-bottom:18px;flex-wrap:wrap;}
-  footer .copyright{font-size:13px;color:var(--muted);}
-
-  /* sticky bottom bar */
-  #stickyBar{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(28,23,18,.97);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;gap:18px;padding:12px 20px;flex-wrap:wrap;transform:translateY(120%);transition:transform .25s ease;}
-  #stickyBar.show{transform:translateY(0);}
-  #stickyBar .info{color:#EFE6DA;font-size:14px;}
-  #stickyBar .info del{color:#9A8B7C;font-size:12px;margin-left:6px;}
-  #stickyBar button{background:var(--gold);color:var(--ink);border:none;border-radius:999px;padding:11px 24px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
-  #stickyBar button:hover{background:var(--gold-dark);}
-
-  /* cart drawer */
-  #overlay{position:fixed;inset:0;z-index:90;background:rgba(28,23,18,.5);display:none;}
-  #overlay.show{display:block;}
-  #cartDrawer{position:fixed;top:0;right:0;bottom:0;z-index:100;width:min(420px,92vw);background:var(--cream);box-shadow:-20px 0 60px rgba(28,23,18,.25);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .25s ease;}
-  #cartDrawer.show{transform:translateX(0);}
-  .cart-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--border);}
-  .cart-head h3{font-size:22px;}
-  #closeCart{background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink);line-height:1;}
-  #cartItems{flex:1;overflow-y:auto;padding:20px 24px;display:grid;gap:16px;align-content:start;}
-  .cart-empty{color:var(--brown-dark);text-align:center;margin-top:40px;}
-  .cart-item{display:flex;gap:14px;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:14px;}
-  .cart-item img{width:64px;height:64px;object-fit:cover;border-radius:10px;}
-  .cart-item .rm{background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;align-self:start;}
-  .cart-foot{padding:20px 24px;border-top:1px solid var(--border);}
-  .cart-subtotal{display:flex;justify-content:space-between;font-size:17px;margin-bottom:14px;}
-  #checkoutBtn{width:100%;padding:16px;font-size:16px;}
-  #checkoutNote{margin:10px 0 0;font-size:13px;color:var(--brown);text-align:center;}
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- Sale bar — update SALE_END_ISO in the script below for each real promo; it counts down to a fixed date, it does not fake-reset per visit -->
-<div id="saleBar">☀️ Summer Sale — ends in <strong id="cd-h">--</strong>:<strong id="cd-m">--</strong>:<strong id="cd-s">--</strong> ☀️</div>
+<div id="saleBar">☀️ Summer Sale — up to <strong>35% off</strong> bundles &nbsp;·&nbsp; Free Brow Playbook with every order ☀️</div>
 <div id="tagline">Natural Brows. Instant Confidence.</div>
 
 <nav>
-  <a href="#top" class="logo">GECOMO</a>
+  <a href="index.html" class="logo">GECOMO</a>
   <div class="navlinks">
-    <a href="#how">How it works</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#faq">FAQ</a>
+    <a href="index.html" class="active">Shop</a>
+    <a href="stamp.html">Brow Stamp</a>
+    <a href="pencil.html">Brow Pencil</a>
     <a href="track.html">Track Order</a>
     <button id="cartBtn" type="button">Cart · <span id="cartCount">0</span></button>
   </div>
 </nav>
 
 <!-- Hero -->
-<header id="top">
+<header class="home-hero" id="top">
   <video autoplay muted loop playsinline poster="E908F214-3FA3-4207-B490-FC76742D6EA2.png">
     <source src="hero-video.mp4" type="video/mp4">
   </video>
   <div class="scrim"></div>
-  <div class="hero-copy">
-    <div class="hero-badge">★★★★★ &nbsp;4.8 — 2,300+ verified reviews</div>
-    <h1>Perfect brows in 10 seconds. Stamp, press, done.</h1>
-    <p>The GECOMO Double Seal stamp kit gives you salon-shaped, natural-looking eyebrows — no pencil skills, no 20-minute mirror sessions.</p>
+  <div class="inner">
+    <div class="hero-badge">★★★★★ &nbsp;Loved by 2,300+ customers</div>
+    <h1>Brows that look effortless — because they are.</h1>
+    <p class="lead">Salon-quality brows in seconds. Explore the GECOMO essentials, designed for real people and real mornings.</p>
     <div class="hero-cta">
-      <a href="#buy" class="btn btn-gold">Shop the kit — <span id="heroPrice">$19.99</span></a>
-      <span>Ships within 24h · Cruelty-free</span>
+      <a href="#collection" class="btn btn-gold">Shop the collection</a>
+      <span>Ships within 24h · 60-day guarantee</span>
     </div>
   </div>
 </header>
 
 <div class="marquee-wrap">
   <div class="marquee">
-    <span>10-second application</span><span>·</span><span>Smudge-proof all day</span><span>·</span><span>3 brow shapes included</span><span>·</span><span>Free brow playbook included</span><span>·</span><span>60-day guarantee</span><span>·</span>
-    <span>10-second application</span><span>·</span><span>Smudge-proof all day</span><span>·</span><span>3 brow shapes included</span><span>·</span><span>Free brow playbook included</span><span>·</span><span>60-day guarantee</span><span>·</span>
+    <span>Effortless in seconds</span><span>·</span><span>Waterproof &amp; smudge-proof</span><span>·</span><span>Natural-looking finish</span><span>·</span><span>Free brow playbook included</span><span>·</span><span>60-day guarantee</span><span>·</span>
+    <span>Effortless in seconds</span><span>·</span><span>Waterproof &amp; smudge-proof</span><span>·</span><span>Natural-looking finish</span><span>·</span><span>Free brow playbook included</span><span>·</span><span>60-day guarantee</span><span>·</span>
   </div>
 </div>
 
-<!-- Buy section: headline, features, pricing tiers, add to cart, mini reviews -->
-<section id="buy">
-  <div class="wrap buy-grid">
-    <div class="buy-media">
-      <div class="card">
-        <img src="E908F214-3FA3-4207-B490-FC76742D6EA2.png" alt="GECOMO Double Seal eyebrow powder stamp — three shades">
-      </div>
+<!-- Product collection -->
+<section id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The collection</p>
+      <h2>Two ways to your best brows</h2>
+      <p>Whether you stamp or sketch, GECOMO makes fuller, natural-looking brows effortless — no skills, no fuss.</p>
     </div>
 
-    <div class="buy-content">
-      <div class="eyebrow">GECOMO · Double Seal</div>
-      <h1 class="pdp-title">Perfect Eyebrows in 10 Seconds</h1>
-
-      <ul class="feature-list">
-        <li>✨ <span><b>Symmetrical, natural-looking</b> brows</span></li>
-        <li>💧 <span><b>Smudge-proof</b> — lasts all day</span></li>
-        <li>🖌️ <span><b>Reusable stamps</b> + dual-tip brush included</span></li>
-        <li>✅ <span><b>Beginner friendly</b> · works on all skin tones</span></li>
-      </ul>
-
-      <div class="divider-label">Limited time offer</div>
-
-      <div id="bundleList"></div>
-
-      <div class="protection">
-        <input type="checkbox" id="protection">
-        <label for="protection">Add Shipping Protection — <strong>$1.98</strong> (covers lost or damaged packages)</label>
-      </div>
-
-      <button id="addToCart" class="btn btn-gold" type="button">Add to cart — <span id="atcPrice">$19.99</span></button>
-      <div class="guarantee-row">
-        <span>✓ 60-day guarantee</span>
-        <span>✓ Ships in 24h</span>
-        <span>✓ Secure checkout</span>
-      </div>
-      <p id="liveNote" style="display:none;margin:14px 0 0;font-size:13px;color:var(--brown);text-align:center;"></p>
-
-      <div class="mini-carousel">
-        <div class="avatar" id="mcAvatar">A</div>
-        <div class="mini-carousel-text">
-          <q id="mcQuote">I literally have barely any eyebrows and this made them look SO natural. Took me less than a minute.</q>
-          <div class="mini-carousel-name" id="mcName">Alice B. · ★★★★★</div>
-          <div class="dots" id="mcDots"></div>
+    <div class="product-grid">
+      <!-- Brow Stamp -->
+      <a class="card product-card" href="stamp.html">
+        <div class="media">
+          <span class="flag">Bestseller</span>
+          <img src="E908F214-3FA3-4207-B490-FC76742D6EA2.png" alt="GECOMO Double Seal Brow Stamp Kit">
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Stamp-on demo -->
-<section id="demo">
-  <div class="card">
-    <video autoplay muted loop playsinline>
-      <source src="gemini_generated_video_2EE05D3F.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="copy">
-    <div class="eyebrow">See it in action</div>
-    <h2>Stamp on for instant fuller brows 👁️</h2>
-    <p style="color:var(--body);line-height:1.7;margin-top:14px;">Load the sponge stamp on the two-tone powder, line it up with your natural arch, and press. One second per brow — no brushes, no steady hand, no skill required.</p>
-    <div class="stat-row">
-      <div class="stat"><b>10 sec</b><span>Per application</span></div>
-      <div class="stat"><b>3</b><span>Brow shapes included</span></div>
-      <div class="stat"><b>60 day</b><span>Money-back guarantee</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- How it works -->
-<section id="how" class="wrap" style="padding:20px 28px 88px;text-align:center;">
-  <p class="eyebrow">How it works</p>
-  <h2 style="font-size:clamp(30px,4vw,42px);margin:0 0 48px;">Three steps. No skill required.</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;text-align:left;">
-    <div class="card" style="padding:28px;">
-      <div style="font-family:'Marcellus',serif;font-size:15px;color:var(--brown);letter-spacing:.2em;">STEP 01</div>
-      <h3 style="font-size:22px;margin:12px 0 8px;">Pick your shape</h3>
-      <p style="color:var(--body);line-height:1.6;">Choose from Korean arch, natural, or one-word straight — the three most requested brow shapes at salons.</p>
-    </div>
-    <div class="card" style="padding:28px;">
-      <div style="font-family:'Marcellus',serif;font-size:15px;color:var(--brown);letter-spacing:.2em;">STEP 02</div>
-      <h3 style="font-size:22px;margin:12px 0 8px;">Press into powder</h3>
-      <p style="color:var(--body);line-height:1.6;">Load the sponge stamp on the double-layered, two-tone powder — a lighter front and deeper tail for dimension.</p>
-    </div>
-    <div class="card" style="padding:28px;">
-      <div style="font-family:'Marcellus',serif;font-size:15px;color:var(--brown);letter-spacing:.2em;">STEP 03</div>
-      <h3 style="font-size:22px;margin:12px 0 8px;">Stamp &amp; go</h3>
-      <p style="color:var(--body);line-height:1.6;">Line it up, press for one second, and blend edges with the included dual-ended brush. Done in 10 seconds per brow.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Shade finder -->
-<section id="shades">
-  <p class="eyebrow">Not sure which shade is right for you? 👇</p>
-  <h2 style="font-size:clamp(28px,3.5vw,38px);margin-bottom:28px;">Match your natural hair color</h2>
-  <div class="shade-box">
-    <p>When in doubt, go one shade lighter for the most natural look.</p>
-    <div id="shadeFinderList"></div>
-  </div>
-</section>
-
-<!-- Free guide bonus -->
-<section id="guide">
-  <div class="guide-top">
-    <p class="guide-kicker">Limited Time</p>
-    <h2 class="guide-headline">Free Gift</h2>
-    <span class="guide-pill">+ Free Digital Guide</span>
-    <p class="guide-sub">Get <em>The Brow Playbook</em></p>
-    <div class="guide-visual">
-      <div class="book">
-        <div class="book-top">
-          <span class="book-swoosh">〜</span>
-          <div class="book-brand">GECOMO<span>Beauty Simplified.</span></div>
-          <div class="book-title">The<em>Brow Playbook</em></div>
-          <div class="book-divider"></div>
-          <div class="book-subtitle">Find Your Perfect Brow Shape</div>
-          <div class="book-tagline">Quick. Easy. You.</div>
+        <div class="pc-body">
+          <div class="pc-eyebrow">Double Seal</div>
+          <h3>Brow Stamp Kit</h3>
+          <p class="pc-desc">Stamp on symmetrical, natural-looking brows in 10 seconds. Two-tone powder, reusable shaped stamps, and a dual-tip brush.</p>
+          <div class="pc-stars">★★★★★ <span>4.8 · 2,300+ reviews</span></div>
+          <div class="pc-foot">
+            <div class="pc-price">$39.99 <del>$59.99</del></div>
+            <span class="pc-cta">Shop stamp</span>
+          </div>
         </div>
-        <div class="book-band">Your Free Guide</div>
+      </a>
+
+      <!-- Brow Pencil (NEW) -->
+      <a class="card product-card" href="pencil.html">
+        <div class="media">
+          <span class="flag gold">New</span>
+          <img src="https://cdn.shopify.com/s/files/1/1010/2482/5658/files/dbf2a140-4382-43d4-bc5b-7d801499c621.jpg?v=1784046043" alt="GECOMO Waterproof Dual-Ended Eyebrow Pencil">
+        </div>
+        <div class="pc-body">
+          <div class="pc-eyebrow">Dual-Ended</div>
+          <h3>Waterproof Brow Pencil</h3>
+          <p class="pc-desc">A 4D micro-carved tip draws fine, hair-like strokes, with a spoolie to blend. Waterproof, smudge-proof, and doubles as eyeliner.</p>
+          <div class="pc-stars">★★★★★ <span>4.9 · new</span></div>
+          <div class="pc-foot">
+            <div class="pc-price">$29.99 <del>$44.99</del></div>
+            <span class="pc-cta">Shop pencil</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Brand ethos -->
+<section id="ethos">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why GECOMO</p>
+      <h2>Beauty, simplified.</h2>
+      <p>We make the fiddly parts of a beauty routine feel effortless — so looking put-together doesn't cost you your morning.</p>
+    </div>
+    <div class="ethos-grid">
+      <div class="ethos-item">
+        <div class="ic">⏱️</div>
+        <h3>Fast by design</h3>
+        <p>Every product is built to get you a natural result in seconds, not a 20-minute mirror session.</p>
+      </div>
+      <div class="ethos-item">
+        <div class="ic">💧</div>
+        <h3>Made to last</h3>
+        <p>Waterproof, smudge-proof formulas that hold up through sweat, humidity, and a full day out.</p>
+      </div>
+      <div class="ethos-item">
+        <div class="ic">🐰</div>
+        <h3>Cruelty-free</h3>
+        <p>Kind formulas and gentle materials — never tested on animals.</p>
+      </div>
+      <div class="ethos-item">
+        <div class="ic">🛡️</div>
+        <h3>60-day guarantee</h3>
+        <p>Love it or send it back for a full refund. No risk, no fine print.</p>
       </div>
     </div>
   </div>
-
-  <div class="guide-bottom">
-    <div class="gift-icon">🎁</div>
-    <h3>Your quick-start guide to perfect brows</h3>
-    <p class="desc">Our quick-start guide to finding your perfect brow shape for your face, matching your shade, and applying like a pro.</p>
-    <div class="guide-rule"></div>
-    <p class="value-line">A $14.99 value, yours <strong>completely free</strong>. No catch.</p>
-    <!-- TODO: once the real PDF is ready, drop it in the repo root as "gecomo-brow-playbook.pdf" and this button will serve it automatically. -->
-    <a class="btn btn-gold" href="gecomo-brow-playbook.pdf" download>Get the free guide →</a>
-  </div>
 </section>
-
-<!-- What's included accordion -->
-<section id="included">
-  <div class="acc-item">
-    <details open>
-      <summary><span class="summary-left">👁️ What's in your kit</span><span class="chev">⌄</span></summary>
-      <div class="body">
-        <p><strong>Double Seal two-tone powder</strong> — layered light + deep shade for a naturally dimensional brow, not a flat block.</p>
-        <p style="margin-top:10px;"><strong>3 pairs of shaped stamps</strong> — Korean, natural, and one-word straight, sized left and right.</p>
-        <p style="margin-top:10px;"><strong>Dual-ended brow brush</strong> — angled liner side plus smudge tip for blending edges.</p>
-        <p style="margin-top:10px;"><strong>Free Brow Playbook</strong> — our shade + shape guide, included at no cost.</p>
-      </div>
-    </details>
-  </div>
-  <div class="acc-item">
-    <details>
-      <summary><span class="summary-left">❓ How it works</span><span class="chev">⌄</span></summary>
-      <div class="body">Pick a shape, press the stamp into the two-tone powder, and press onto your brow for about a second. Blend the edges with the included brush. Most people are perfectly even by their second try.</div>
-    </details>
-  </div>
-  <div class="acc-item">
-    <details>
-      <summary><span class="summary-left">🚚 Shipping &amp; guarantee</span><span class="chev">⌄</span></summary>
-      <div class="body">Orders ship within 24 hours. Every kit is backed by a 60-day money-back guarantee — if your brows don't look better, send it back, even used, for a full refund.</div>
-    </details>
-  </div>
-</section>
-
-<div class="info-banner">
-  <span>📦 Ships within 24h</span>
-  <span>🎁 Free Brow Playbook included</span>
-  <span>🔒 60-day guarantee</span>
-</div>
 
 <!-- Reviews -->
 <section id="reviews">
   <div class="reviews-head">
     <p class="eyebrow">Reviews</p>
-    <h2 style="font-size:clamp(30px,4vw,42px);">2,300+ brows and counting.</h2>
+    <h2 style="font-size:clamp(30px,4vw,42px);">Loved by thousands of brows.</h2>
     <div class="stars-lg" style="margin-top:14px;">★★★★★</div>
-    <button id="writeReview" type="button">Write a review</button>
   </div>
-  <div class="review-grid" id="reviewGrid"></div>
+  <div class="review-grid">
+    <figure class="review-card" style="margin:0;">
+      <div class="rhead"><span class="rname">Danielle R.</span><span class="rdate">· Jul 2, 2026</span></div>
+      <div class="rstars">★★★★★</div>
+      <blockquote>"I've never been able to do my brows evenly. The stamp took literally seconds and they matched. I'm shocked."</blockquote>
+    </figure>
+    <figure class="review-card" style="margin:0;">
+      <div class="rhead"><span class="rname">Rachel M.</span><span class="rdate">· Jul 8, 2026</span></div>
+      <div class="rstars">★★★★★</div>
+      <blockquote>"The pencil tip is so fine it looks like individual brow hairs. And it did not budge at the beach."</blockquote>
+    </figure>
+    <figure class="review-card" style="margin:0;">
+      <div class="rhead"><span class="rname">Maya T.</span><span class="rdate">· Jun 28, 2026</span></div>
+      <div class="rstars">★★★★★</div>
+      <blockquote>"Cut my morning routine by 15 minutes. It actually looks like real brow hair, not makeup."</blockquote>
+    </figure>
+  </div>
 </section>
 
 <!-- Guarantee -->
 <section id="guarantee">
   <h2>Love your brows or it's free.</h2>
-  <p>Try GECOMO for 60 days. If your brows don't look better in less time, send it back — even used — for a full refund.</p>
-  <a href="#buy" class="btn btn-gold">Try it risk-free</a>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <h2>Questions, answered.</h2>
-
-  <div class="faq-item">
-    <details>
-      <summary>Will it work on my skin tone / hair color?<span class="chev">⌄</span></summary>
-      <div class="body">The kit comes in two shades — Dark Brown for black, dark brown and cool-toned hair, and Light Brown for blonde, light brown and warm-toned hair. Each compact layers a lighter front and deeper tail shade, so it blends into a wide range of tones.</div>
-    </details>
-  </div>
-  <div class="faq-item">
-    <details>
-      <summary>How long does it last on skin?<span class="chev">⌄</span></summary>
-      <div class="body">All day under normal wear — it's smudge-resistant and sweat-resistant. It removes easily with any makeup remover or cleansing oil.</div>
-    </details>
-  </div>
-  <div class="faq-item">
-    <details>
-      <summary>How many uses per compact?<span class="chev">⌄</span></summary>
-      <div class="body">Roughly 3–4 months of daily use. The stamps are washable and reusable indefinitely.</div>
-    </details>
-  </div>
-  <div class="faq-item">
-    <details>
-      <summary>What if I stamp it crooked?<span class="chev">⌄</span></summary>
-      <div class="body">Wipe with a damp cotton swab and re-stamp — most people are perfectly even by their second try. And you're covered by the 60-day guarantee either way.</div>
-    </details>
-  </div>
-  <div class="faq-item">
-    <details>
-      <summary>Is it cruelty-free?<span class="chev">⌄</span></summary>
-      <div class="body">Yes — GECOMO products are cruelty-free and the sponges are latex-free.</div>
-    </details>
-  </div>
+  <p>Try any GECOMO product for 60 days. If it doesn't give you fuller, more natural brows in less time, send it back — even used — for a full refund.</p>
+  <a href="#collection" class="btn btn-gold">Shop the collection</a>
 </section>
 
 <footer>
-  <a href="#top" class="logo">GECOMO</a>
+  <a href="index.html" class="logo">GECOMO</a>
   <div class="foot-links">
-    <a href="#how">How it works</a>
-    <a href="#buy">Shop</a>
-    <a href="#faq">FAQ</a>
+    <a href="index.html">Shop</a>
+    <a href="stamp.html">Brow Stamp</a>
+    <a href="pencil.html">Brow Pencil</a>
     <a href="track.html">Track Order</a>
   </div>
   <p class="copyright">© 2026 GECOMO. All rights reserved.</p>
 </footer>
 
-<!-- Sticky add-to-cart bar -->
-<div id="stickyBar">
-  <span class="info">Double Seal Stamp Kit · <strong id="stickyPrice">$19.99</strong><del id="stickyCompare">$29.99</del></span>
-  <button id="stickyAdd" type="button">Add to cart</button>
-</div>
-
-<!-- Cart drawer -->
-<div id="overlay"></div>
-<aside id="cartDrawer">
-  <div class="cart-head">
-    <h3>Your cart</h3>
-    <button id="closeCart" type="button">×</button>
-  </div>
-  <div id="cartItems"></div>
-  <div class="cart-foot">
-    <div class="cart-subtotal"><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
-    <button id="checkoutBtn" class="btn btn-dark" type="button">Checkout</button>
-    <p id="checkoutNote" style="display:none;"></p>
-  </div>
-</aside>
-
-<script>
-(function(){
-  "use strict";
-
-  // ---- Shopify headless config (public storefront token — safe client-side) ----
-  var CONFIG = {
-    shopifyDomain: 'ehh05e-7q.myshopify.com',
-    storefrontToken: '40d6d0459487c81052405c45b704f6fc',
-    productHandle: 'eyebrow-makeup-stamp'
-  };
-
-  // Update this for each real promotion — a fixed end date avoids the
-  // dark pattern of a countdown that silently resets for every visitor.
-  var SALE_END = new Date('2026-07-31T23:59:59-05:00').getTime();
-
-  // Each shade maps 1:1 to a Shopify variant, pinned by variantId so
-  // checkout never depends on variant titles. Keep these names in sync
-  // with the variant names in Shopify admin.
-  var SHADES = [
-    { name: 'Dark Brown', hex: '#5C4A3D', desc: 'Black, dark brown & cool-toned hair',
-      variantId: 'gid://shopify/ProductVariant/53718556148026' },
-    { name: 'Light Brown', hex: '#A97B50', desc: 'Blonde, light brown & warm-toned hair',
-      variantId: 'gid://shopify/ProductVariant/53718556180794' }
-  ];
-
-  // Fallback pricing if the live Shopify fetch fails — keep in sync with the
-  // Shopify variant price ($39.99) so the page never advertises a price
-  // checkout won't honor. Live pricing overrides these via bundleInfo().
-  var BUNDLES = [
-    { qty: 1, price: 39.99, compare: 59.99, title: '1 Kit', badge: null, freeShipping: false },
-    { qty: 2, price: 59.99, compare: 119.97, title: '2 Kits', badge: 'Most Popular', freeShipping: true },
-    { qty: 3, price: 77.98, compare: 179.96, title: '3 Kits', badge: 'Best Value', freeShipping: true }
-  ];
-
-  var GUIDE_VALUE = 14.99;
-  var PROTECTION_PRICE = 1.98;
-
-  var REVIEWS = [
-    { name: 'Danielle R.', stars: 5, date: 'Jul 2, 2026', text: "I've never been able to do my brows evenly. This took literally seconds and they matched. I'm shocked." },
-    { name: 'Maya T.', stars: 5, date: 'Jun 28, 2026', text: "Cut my morning routine by 15 minutes. The two-tone powder actually looks like real brow hairs, not a stamp." },
-    { name: 'Priya K.', stars: 4, date: 'Jun 26, 2026', text: "Took two tries to line up right, but now it's foolproof. Survived a full gym session without smudging." },
-    { name: 'Jordan S.', stars: 5, date: 'Jun 20, 2026', text: "The reusable stamps are genius — I don't even need a mirror anymore." }
-  ];
-
-  var state = {
-    bundle: 0,
-    shade: SHADES[0].name,
-    shades: [SHADES[0].name],
-    protection: false,
-    cart: [],
-    cartOpen: false,
-    live: null
-  };
-
-  function fmt(n){ return '$' + n.toFixed(2); }
-  function stars(n){ return '★★★★★☆☆☆☆☆'.slice(5 - n, 10 - n); }
-
-  // ---- Live Shopify pricing (falls back to local BUNDLES on failure) ----
-  function fetchShopify(){
-    var domain = CONFIG.shopifyDomain, token = CONFIG.storefrontToken, handle = CONFIG.productHandle;
-    if (!domain || !token) return;
-    var query = '{ product(handle: "' + handle + '") { title images(first: 5) { edges { node { url altText } } } variants(first: 20) { edges { node { id title availableForSale price { amount currencyCode } compareAtPrice { amount } } } } } }';
-    fetch('https://' + domain + '/api/2024-07/graphql.json', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Shopify-Storefront-Access-Token': token },
-      body: JSON.stringify({ query: query })
-    }).then(function(res){ return res.json(); }).then(function(json){
-      if (json.data && json.data.product) {
-        state.live = json.data.product;
-        render();
-      }
-    }).catch(function(e){ console.warn('Shopify Storefront fetch failed — using local pricing.', e); });
-  }
-
-  function shadeByName(name){
-    return SHADES.filter(function(s){ return s.name === name; })[0] || SHADES[0];
-  }
-
-  function liveVariant(shadeName){
-    if (!state.live) return null;
-    var edges = (state.live.variants && state.live.variants.edges) || [];
-    var wanted = shadeByName(shadeName || state.shade).variantId;
-    var match = edges.filter(function(e){ return e.node.id === wanted; })[0];
-    return (match || edges[0] || {}).node || null;
-  }
-
-  function unitPrice(){
-    var v = liveVariant();
-    return v ? parseFloat(v.price.amount) : null;
-  }
-
-  function bundleInfo(i){
-    var b = BUNDLES[i];
-    var unit = unitPrice();
-    if (unit != null) {
-      var disc = [1, 0.75, 0.65][i];
-      return Object.assign({}, b, { price: unit * b.qty * disc, compare: unit * b.qty * 1.5 });
-    }
-    return b;
-  }
-
-  function currentTotal(){
-    var info = bundleInfo(state.bundle);
-    return info.price + (state.protection ? PROTECTION_PRICE : 0);
-  }
-
-  // ---- Countdown ----
-  function updateCountdown(){
-    var diff = SALE_END - Date.now();
-    if (diff < 0) diff = 0;
-    var h = Math.floor(diff / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    var s = Math.floor((diff % 60000) / 1000);
-    document.getElementById('cd-h').textContent = String(h).padStart(2, '0');
-    document.getElementById('cd-m').textContent = String(m).padStart(2, '0');
-    document.getElementById('cd-s').textContent = String(s).padStart(2, '0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  // ---- Bundle cards ----
-  function renderBundles(){
-    var list = document.getElementById('bundleList');
-    list.innerHTML = '';
-    BUNDLES.forEach(function(b, i){
-      var info = bundleInfo(i);
-      var sel = state.bundle === i;
-      var pct = Math.round((1 - info.price / info.compare) * 100);
-
-      var el = document.createElement('div');
-      el.className = 'bundle' + (sel ? ' selected' : '');
-
-      var ribbon = b.badge ? '<span class="ribbon">' + b.badge + '</span>' : '';
-      var freeShipLine = b.freeShipping ? '<div class="line"><span>🚚 Free shipping</span></div>' : '';
-
-      el.innerHTML =
-        ribbon +
-        '<div class="bundle-top" data-pick="' + i + '">' +
-          '<div class="bundle-left"><span class="radio"></span><span class="bundle-title">' + b.title + '</span><span class="save-pill">Save ' + pct + '%</span></div>' +
-          '<div class="bundle-price"><span class="now">' + fmt(info.price) + '</span><span class="was">' + fmt(info.compare) + '</span></div>' +
-        '</div>' +
-        (sel ? (
-          '<div class="bundle-extra">' +
-            '<div class="line"><span>🎁 Free Guide: Find Your Perfect Brow Shape</span><span class="val">' + fmt(GUIDE_VALUE) + '</span></div>' +
-            freeShipLine +
-            (b.qty > 1
-              ? '<div class="shade-row" id="shadeRow"></div>'
-              : '<div><label style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--body);display:block;margin-bottom:6px;">Shade — ' + state.shade + '</label><div class="swatch-row" id="shadeSwatchRow"></div></div>') +
-          '</div>'
-        ) : '');
-
-      list.appendChild(el);
-    });
-
-    list.querySelectorAll('[data-pick]').forEach(function(node){
-      node.addEventListener('click', function(){
-        var i = parseInt(node.getAttribute('data-pick'), 10);
-        state.bundle = i;
-        var qty = BUNDLES[i].qty;
-        var arr = [];
-        for (var j = 0; j < qty; j++) arr.push(state.shades[j] || SHADES[0].name);
-        state.shades = arr;
-        render();
-      });
-    });
-
-    if (BUNDLES[state.bundle].qty > 1) renderShadeRow();
-    else renderSwatches();
-  }
-
-  // Single-shade swatch picker (1 Kit tier)
-  function renderSwatches(){
-    var host = document.getElementById('shadeSwatchRow');
-    if (!host) return;
-    host.innerHTML = '';
-    SHADES.forEach(function(s){
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'swatch' + (state.shade === s.name ? ' selected' : '');
-      btn.style.background = s.hex;
-      btn.title = s.name;
-      btn.addEventListener('click', function(){
-        state.shade = s.name;
-        state.shades = [s.name];
-        render();
-      });
-      host.appendChild(btn);
-    });
-  }
-
-  function renderShadeRow(){
-    var row = document.getElementById('shadeRow');
-    if (!row) return;
-    row.innerHTML = '';
-    var qty = BUNDLES[state.bundle].qty;
-    for (var i = 0; i < qty; i++) {
-      (function(idx){
-        var label = document.createElement('label');
-        label.innerHTML = '#' + (idx + 1) + ' &nbsp;';
-        var select = document.createElement('select');
-        SHADES.forEach(function(s){
-          var opt = document.createElement('option');
-          opt.value = s.name;
-          opt.textContent = s.name;
-          if ((state.shades[idx] || SHADES[0].name) === s.name) opt.selected = true;
-          select.appendChild(opt);
-        });
-        select.addEventListener('change', function(){
-          state.shades[idx] = select.value;
-          state.shade = state.shades[0];
-          renderSummary();
-        });
-        label.appendChild(select);
-        row.appendChild(label);
-      })(i);
-    }
-  }
-
-  function renderSummary(){
-    var info = bundleInfo(state.bundle);
-    var total = currentTotal();
-    document.getElementById('heroPrice').textContent = fmt(bundleInfo(0).price);
-    document.getElementById('atcPrice').textContent = fmt(total);
-    document.getElementById('cartCount').textContent = state.cart.length;
-    document.getElementById('stickyPrice').textContent = fmt(total);
-    document.getElementById('stickyCompare').textContent = fmt(info.compare + (state.protection ? PROTECTION_PRICE : 0));
-
-    var note = document.getElementById('liveNote');
-    if (state.live) {
-      var v = liveVariant();
-      note.style.display = 'block';
-      note.textContent = 'Live pricing from Shopify · ' + (v && v.availableForSale ? 'In stock' : 'Low stock');
-    } else {
-      note.style.display = 'none';
-    }
-  }
-
-  function render(){
-    renderBundles();
-    renderSummary();
-  }
-
-  // ---- Shade finder section (static list, independent of bundle picker) ----
-  (function renderShadeFinder(){
-    var host = document.getElementById('shadeFinderList');
-    SHADES.forEach(function(s){
-      var row = document.createElement('div');
-      row.className = 'shade-item';
-      row.innerHTML =
-        '<div class="swatch-lg" style="background:' + s.hex + '"></div>' +
-        '<div><h4>' + s.name + '</h4><p>' + s.desc + '</p></div>';
-      host.appendChild(row);
-    });
-  })();
-
-  // ---- Reviews ----
-  (function renderReviews(){
-    var grid = document.getElementById('reviewGrid');
-    REVIEWS.forEach(function(r){
-      var card = document.createElement('figure');
-      card.className = 'review-card';
-      card.style.margin = '0';
-      card.innerHTML =
-        '<div class="rhead"><span class="rname">' + r.name + '</span><span class="rdate">· ' + r.date + '</span></div>' +
-        '<div class="rstars">' + stars(r.stars) + '</div>' +
-        '<blockquote>"' + r.text + '"</blockquote>';
-      grid.appendChild(card);
-    });
-  })();
-
-  document.getElementById('writeReview').addEventListener('click', function(){
-    window.location.href = 'mailto:reviews@gecomo.com?subject=My%20GECOMO%20Review';
-  });
-
-  // ---- Mini testimonial carousel ----
-  (function(){
-    var slides = REVIEWS.slice(0, 3);
-    var idx = 0;
-    var quote = document.getElementById('mcQuote');
-    var name = document.getElementById('mcName');
-    var avatar = document.getElementById('mcAvatar');
-    var dotsHost = document.getElementById('mcDots');
-
-    slides.forEach(function(_, i){
-      var d = document.createElement('button');
-      d.className = 'dot' + (i === 0 ? ' active' : '');
-      d.type = 'button';
-      d.addEventListener('click', function(){ show(i); });
-      dotsHost.appendChild(d);
-    });
-
-    function show(i){
-      idx = i;
-      var s = slides[idx];
-      quote.textContent = s.text;
-      name.textContent = s.name + ' · ' + stars(s.stars);
-      avatar.textContent = s.name.charAt(0);
-      Array.from(dotsHost.children).forEach(function(d, j){ d.className = 'dot' + (j === idx ? ' active' : ''); });
-    }
-    show(0);
-    setInterval(function(){ show((idx + 1) % slides.length); }, 4500);
-  })();
-
-  // ---- Protection checkbox ----
-  document.getElementById('protection').addEventListener('change', function(e){
-    state.protection = e.target.checked;
-    renderSummary();
-  });
-
-  // ---- Add to cart ----
-  function addToCart(){
-    var info = bundleInfo(state.bundle);
-    state.cart.push({
-      id: Date.now(),
-      qty: info.qty,
-      shades: state.shades.slice(),
-      price: info.price + (state.protection ? PROTECTION_PRICE : 0),
-      variantIds: state.shades.map(function(n){ var v = liveVariant(n); return v ? v.id : null; })
-    });
-    state.cartOpen = true;
-    renderCart();
-    openCart();
-    renderSummary();
-  }
-  document.getElementById('addToCart').addEventListener('click', addToCart);
-  document.getElementById('stickyAdd').addEventListener('click', addToCart);
-
-  // ---- Cart drawer ----
-  var overlay = document.getElementById('overlay');
-  var drawer = document.getElementById('cartDrawer');
-
-  function openCart(){
-    overlay.classList.add('show');
-    drawer.classList.add('show');
-  }
-  function closeCart(){
-    overlay.classList.remove('show');
-    drawer.classList.remove('show');
-    document.getElementById('checkoutNote').style.display = 'none';
-  }
-  document.getElementById('cartBtn').addEventListener('click', openCart);
-  document.getElementById('closeCart').addEventListener('click', closeCart);
-  overlay.addEventListener('click', closeCart);
-
-  function renderCart(){
-    var host = document.getElementById('cartItems');
-    host.innerHTML = '';
-    if (state.cart.length === 0) {
-      host.innerHTML = '<p class="cart-empty">Your cart is empty.</p>';
-    } else {
-      state.cart.forEach(function(c){
-        var row = document.createElement('div');
-        row.className = 'cart-item';
-        row.innerHTML =
-          '<img src="E908F214-3FA3-4207-B490-FC76742D6EA2.png" alt="Kit">' +
-          '<div style="flex:1;">' +
-            '<div style="font-weight:600;">Double Seal Stamp Kit</div>' +
-            '<div style="font-size:13px;color:var(--brown-dark);">' + c.qty + (c.qty > 1 ? ' kits' : ' kit') + ' · ' + c.shades.join(', ') + '</div>' +
-            '<div style="font-size:15px;margin-top:4px;">' + fmt(c.price) + '</div>' +
-          '</div>' +
-          '<button class="rm" type="button">×</button>';
-        row.querySelector('.rm').addEventListener('click', function(){
-          state.cart = state.cart.filter(function(x){ return x.id !== c.id; });
-          renderCart();
-          renderSummary();
-        });
-        host.appendChild(row);
-      });
-    }
-    var subtotal = state.cart.reduce(function(s, c){ return s + c.price; }, 0);
-    document.getElementById('cartSubtotal').textContent = fmt(subtotal);
-  }
-
-  document.getElementById('checkoutBtn').addEventListener('click', function(){
-    if (state.cart.length === 0) return;
-    var domain = CONFIG.shopifyDomain;
-    var note = document.getElementById('checkoutNote');
-    // One cart line per kit so mixed-shade bundles check out as the right variants.
-    var counts = {};
-    var allResolved = true;
-    state.cart.forEach(function(c){
-      (c.variantIds || []).forEach(function(id){
-        if (!id) { allResolved = false; return; }
-        counts[id] = (counts[id] || 0) + 1;
-      });
-      if (!c.variantIds || c.variantIds.length !== c.qty) allResolved = false;
-    });
-    var ids = Object.keys(counts);
-    if (domain && allResolved && ids.length > 0) {
-      var parts = ids.map(function(id){ return id.split('/').pop() + ':' + counts[id]; }).join(',');
-      window.open('https://' + domain + '/cart/' + parts, '_blank');
-    } else {
-      note.textContent = 'Connect your Shopify store (storefront domain + token above) to enable live checkout.';
-      note.style.display = 'block';
-    }
-  });
-
-  // ---- Sticky bottom bar ----
-  var stickyBar = document.getElementById('stickyBar');
-  var buySection = document.getElementById('buy');
-  window.addEventListener('scroll', function(){
-    var rect = buySection.getBoundingClientRect();
-    var past = rect.bottom < 0;
-    stickyBar.classList.toggle('show', past && !state.cartOpen);
-  }, { passive: true });
-
-  // ---- Init ----
-  render();
-  renderCart();
-  fetchShopify();
-})();
-</script>
+<script src="assets/cart.js"></script>
 </body>
 </html>
