@@ -62,15 +62,25 @@ nav.nav-top{top:0;}
 /* ==========================================================================
    Shop homepage
    ========================================================================== */
-.home-hero{position:relative;min-height:74vh;display:flex;align-items:center;overflow:hidden;background:var(--ink);}
-.home-hero video,.home-hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;}
-.home-hero .scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(28,23,18,.3),rgba(28,23,18,.72));}
-.home-hero .inner{position:relative;max-width:1100px;margin:0 auto;padding:120px 28px 90px;width:100%;}
-.home-hero .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(250,246,241,.14);border:1px solid rgba(250,246,241,.35);backdrop-filter:blur(8px);border-radius:999px;padding:7px 16px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#F5EEE5;}
-.home-hero h1{font-size:clamp(40px,6.4vw,74px);line-height:1.05;margin:24px 0 18px;color:#FBF7F1;max-width:760px;text-shadow:0 2px 24px rgba(28,23,18,.4);}
-.home-hero p.lead{font-size:18px;line-height:1.6;color:#EFE6DA;margin:0 0 30px;max-width:500px;text-shadow:0 1px 12px rgba(28,23,18,.4);}
-.home-hero .hero-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-.home-hero .hero-cta span{font-size:14px;color:#EFE6DA;}
+/* Campaign hero — cinematic film is the star, editorial copy anchored low-left */
+.home-hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink);}
+.home-hero video,.home-hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;}
+/* Soft warm gradient — only enough to seat the type, keeps the film's colour alive */
+.home-hero .scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,15,11,.78) 0%,rgba(20,15,11,.34) 26%,rgba(20,15,11,.04) 52%,transparent 72%);}
+.home-hero .inner{position:relative;max-width:1160px;margin:0 auto;padding:0 40px clamp(48px,8vh,104px);width:100%;}
+.home-hero .hero-kicker{font-size:13px;letter-spacing:.42em;text-transform:uppercase;color:#F0E7DA;margin:0 0 18px;opacity:.92;}
+.home-hero .hero-wordmark{font-family:'Marcellus',serif;font-size:clamp(56px,11vw,140px);line-height:.92;letter-spacing:.12em;color:#FBF7F1;margin:0 0 22px;text-shadow:0 2px 40px rgba(20,15,11,.45);}
+.home-hero p.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:#F1E9DD;margin:0 0 32px;max-width:520px;text-shadow:0 1px 16px rgba(20,15,11,.5);}
+.home-hero .hero-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.btn-ghost{background:rgba(250,246,241,.08);border:1.5px solid rgba(250,246,241,.6);color:#FBF7F1;backdrop-filter:blur(6px);}
+.btn-ghost:hover{background:rgba(250,246,241,.18);}
+/* film-grain fade at the very edges so the video's baked-in frame blends into the ink bg */
+.home-hero .edge-fade{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 120px 40px rgba(20,15,11,.55);}
+@media (max-width:720px){
+  .home-hero{min-height:88vh;align-items:flex-end;}
+  .home-hero .inner{padding:0 24px 56px;text-align:left;}
+  .home-hero .hero-wordmark{letter-spacing:.08em;}
+}
 
 /* section heading block */
 .section-head{text-align:center;max-width:640px;margin:0 auto;}
