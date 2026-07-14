@@ -286,21 +286,21 @@
   <button id="stickyAdd" type="button">Add to cart</button>
 </div>
 
+<script src="assets/shopify.js"></script>
 <script src="assets/cart.js"></script>
 <script>
 (function(){
   "use strict";
 
-  var CONFIG = {
-    shopifyDomain: 'ehh05e-7q.myshopify.com',
-    storefrontToken: '40d6d0459487c81052405c45b704f6fc',
-    productHandle: 'waterproof-dual-ended-eyebrow-pencil'
-  };
+  var CONFIG = { productHandle: 'waterproof-dual-ended-eyebrow-pencil' };
 
+  // Fallback image/gallery used until the live Shopify images load. Once the
+  // Storefront fetch returns, these are replaced with whatever photos are
+  // currently on the product in Shopify — change them there, no code edit here.
   var PRODUCT_IMAGE = 'https://cdn.shopify.com/s/files/1/1010/2482/5658/files/dbf2a140-4382-43d4-bc5b-7d801499c621.jpg?v=1784046043';
   var PRODUCT_TITLE = 'Dual-Ended Brow Pencil';
 
-  var GALLERY = [
+  var gallery = [
     'https://cdn.shopify.com/s/files/1/1010/2482/5658/files/dbf2a140-4382-43d4-bc5b-7d801499c621.jpg?v=1784046043',
     'https://cdn.shopify.com/s/files/1/1010/2482/5658/files/8f74ff22-9477-48f1-b545-b6266d31bb5c.jpg?v=1784046042',
     'https://cdn.shopify.com/s/files/1/1010/2482/5658/files/90dd4e0a-80da-4d1d-95b0-f239c18530ee.jpg?v=1784046043',
@@ -341,22 +341,28 @@
     { name: 'Amara K.', stars: 5, date: 'Jun 25, 2026', text: "Finally a pencil that doesn't smudge into my under-brow by noon. The spoolie end blends it beautifully." }
   ];
 
-  var state = { bundle: 0, shade: SHADES[0].name, shades: [SHADES[0].name], protection: false, live: null };
+  var state = { bundle: 0, shade: SHADES[0].name, shades: [SHADES[0].name], protection: false, live: null, image: PRODUCT_IMAGE };
 
   function fmt(n){ return '$' + n.toFixed(2); }
   function stars(n){ return '★★★★★☆☆☆☆☆'.slice(5 - n, 10 - n); }
 
+  // Pull live pricing + images (main + gallery) from Shopify. Change the
+  // product photos in Shopify admin and they update here automatically.
   function fetchShopify(){
-    var domain = CONFIG.shopifyDomain, token = CONFIG.storefrontToken, handle = CONFIG.productHandle;
-    if (!domain || !token) return;
-    var query = '{ product(handle: "' + handle + '") { title variants(first: 20) { edges { node { id title availableForSale price { amount currencyCode } compareAtPrice { amount } } } } } }';
-    fetch('https://' + domain + '/api/2024-07/graphql.json', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Shopify-Storefront-Access-Token': token },
-      body: JSON.stringify({ query: query })
-    }).then(function(res){ return res.json(); }).then(function(json){
-      if (json.data && json.data.product) { state.live = json.data.product; render(); }
-    }).catch(function(e){ console.warn('Shopify Storefront fetch failed — using local pricing.', e); });
+    if (!window.GecomoShopify) return;
+    GecomoShopify.fetchProduct(CONFIG.productHandle).then(function(product){
+      if (!product) return;
+      state.live = product;
+      var imgs = GecomoShopify.imageList(product);
+      if (imgs.length) {
+        gallery = imgs.map(function(i){ return i.url; });
+        state.image = gallery[0];
+        var main = document.getElementById('mainImg');
+        if (main) { main.src = gallery[0]; if (imgs[0].altText) main.alt = imgs[0].altText; }
+        renderThumbs();
+      }
+      render();
+    });
   }
 
   function shadeByName(name){ return SHADES.filter(function(s){ return s.name === name; })[0] || SHADES[0]; }
@@ -393,14 +399,16 @@
   }
   updateCountdown(); setInterval(updateCountdown, 1000);
 
-  // ---- Gallery thumbnails ----
-  (function renderThumbs(){
+  // ---- Gallery thumbnails (re-callable so live Shopify images can rebuild it) ----
+  function renderThumbs(){
     var host = document.getElementById('thumbs');
     var main = document.getElementById('mainImg');
-    GALLERY.forEach(function(src, i){
+    if (!host) return;
+    host.innerHTML = '';
+    gallery.forEach(function(src, i){
       var t = document.createElement('img');
       t.src = src; t.alt = 'View ' + (i + 1);
-      if (i === 0) t.className = 'active';
+      if (src === main.src || (i === 0 && !main.src)) t.className = 'active';
       t.addEventListener('click', function(){
         main.src = src;
         Array.from(host.children).forEach(function(c){ c.classList.remove('active'); });
@@ -408,7 +416,8 @@
       });
       host.appendChild(t);
     });
-  })();
+  }
+  renderThumbs();
 
   function renderBundles(){
     var list = document.getElementById('bundleList');
@@ -565,7 +574,7 @@
     });
     GecomoCart.add({
       title: PRODUCT_TITLE,
-      image: PRODUCT_IMAGE,
+      image: state.image,
       meta: info.qty + (info.qty > 1 ? ' pencils · ' : ' pencil · ') + state.shades.join(', ') + (state.protection ? ' · + Protection' : ''),
       price: info.price + (state.protection ? PROTECTION_PRICE : 0),
       lines: lines
