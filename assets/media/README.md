@@ -15,6 +15,19 @@ dashed placeholder printed with the filename.
 | `ugc4.mp4` | Video 4 | Brow Pencil |
 | `ugc5.mp4` | Video 5 | Brow Stamp |
 
+### Category tiles (portrait 3:4)
+| File | Tile |
+|---|---|
+| `cat-bestsellers.jpg` | Bestsellers |
+| `cat-stamp.jpg` | Brow Stamp |
+| `cat-pencil.jpg` | Brow Pencil |
+| `cat-guide.jpg` | Free Guide |
+
+### Latest launch band (wide 21:9)
+| File | Slot |
+|---|---|
+| `home-launch.jpg` | "Our Latest Launch" full-width image |
+
 ### Review photos (landscape ~4:3)
 | File | Review card |
 |---|---|

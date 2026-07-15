@@ -5,27 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GECOMO — Effortless, Natural Brows</title>
 <meta name="description" content="GECOMO makes natural-looking brows effortless. Shop the Double Seal brow stamp and the waterproof dual-ended brow pencil — salon-quality brows in seconds, 60-day guarantee.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23FAF6F1'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%231C1712'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23FBFAF8'/%3E%3Ctext x='32' y='44' font-family='Helvetica,sans-serif' font-size='38' text-anchor='middle' fill='%23121212'%3EG%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=4">
 </head>
 <body>
 
-<div id="saleBar">☀️ Summer Sale — up to <strong>35% off</strong> bundles &nbsp;·&nbsp; Free Brow Playbook with every order ☀️</div>
-<div id="tagline">Natural Brows. Instant Confidence.</div>
+<div id="saleBar">Summer Sale — up to <strong>35% off</strong> bundles · Free Brow Playbook with every order</div>
 
-<nav>
-  <a href="index.html" class="logo">GECOMO</a>
-  <div class="navlinks">
-    <a href="index.html" class="active">Shop</a>
+<header class="site-head">
+  <div class="masthead">
+    <div class="mast-side left"><a href="track.html">Track Order</a></div>
+    <a href="index.html" class="logo">GECOMO</a>
+    <div class="mast-side right"><button id="cartBtn" type="button">Cart · <span id="cartCount">0</span></button></div>
+  </div>
+  <nav class="navrow">
+    <a href="#collection" class="active">Shop All</a>
+    <a href="#collection">Bestsellers</a>
     <a href="stamp.html">Brow Stamp</a>
     <a href="pencil.html">Brow Pencil</a>
+    <a href="stamp.html#guide">Free Guide</a>
     <a href="track.html">Track Order</a>
-    <button id="cartBtn" type="button">Cart · <span id="cartCount">0</span></button>
-  </div>
-</nav>
+  </nav>
+</header>
+
+<div id="tagline">Natural Brows. Instant Confidence.</div>
 
 <!-- Campaign hero -->
 <header class="home-hero" id="top">
@@ -33,14 +39,11 @@
     <source src="gecomo-campaign.mp4" type="video/mp4">
   </video>
   <div class="scrim"></div>
-  <div class="edge-fade"></div>
   <div class="inner">
-    <p class="hero-kicker">Introducing</p>
-    <h1 class="hero-wordmark">GECOMO</h1>
-    <p class="lead">Effortless, natural beauty — made for real mornings and golden afternoons. Salon-quality brows in seconds, and the confidence to match.</p>
+    <h1 class="hero-headline">Effortless Brows for Real Mornings</h1>
+    <p class="lead">Salon-quality, natural-looking brows in seconds — and the confidence to match.</p>
     <div class="hero-cta">
-      <a href="#collection" class="btn btn-gold">Shop the collection</a>
-      <a href="#ethos" class="btn btn-ghost">Our story</a>
+      <a href="#collection" class="btn btn-ghost">Shop Bestsellers</a>
     </div>
   </div>
 </header>
@@ -52,51 +55,117 @@
   </div>
 </div>
 
-<!-- Product collection -->
+<!-- Curated favorites -->
 <section id="collection">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">The collection</p>
-      <h2>Two ways to your best brows</h2>
-      <p>Whether you stamp or sketch, GECOMO makes fuller, natural-looking brows effortless — no skills, no fuss.</p>
+      <h2>Curated Favorites</h2>
     </div>
-
+    <div class="tab-row" id="favTabs">
+      <a data-filter="all" class="active">Bestsellers</a>
+      <a data-filter="new">New Arrivals</a>
+      <a data-filter="stamp">Stamps</a>
+      <a data-filter="pencil">Pencils</a>
+      <a class="boxed" href="stamp.html">Shop All</a>
+    </div>
     <div class="product-grid">
-      <!-- Brow Stamp -->
-      <a class="card product-card" href="stamp.html">
+      <a class="product-card" href="stamp.html" data-cat="all stamp">
         <div class="media">
+          <img data-shopify-handle="eyebrow-makeup-stamp" data-shopify-index="0" src="E908F214-3FA3-4207-B490-FC76742D6EA2.png" alt="GECOMO Double Seal brow stamp kit">
           <span class="flag">Bestseller</span>
-          <img data-shopify-handle="eyebrow-makeup-stamp" src="E908F214-3FA3-4207-B490-FC76742D6EA2.png" alt="GECOMO Double Seal Brow Stamp Kit">
         </div>
         <div class="pc-body">
-          <div class="pc-eyebrow">Double Seal</div>
-          <h3>Brow Stamp Kit</h3>
-          <p class="pc-desc">Stamp on symmetrical, natural-looking brows in 10 seconds. Two-tone powder, reusable shaped stamps, and a dual-tip brush.</p>
           <div class="pc-stars">★★★★★ <span>4.8 · 2,300+ reviews</span></div>
-          <div class="pc-foot">
-            <div class="pc-price">$39.99 <del>$59.99</del></div>
-            <span class="pc-cta">Shop stamp</span>
-          </div>
+          <h3>Double Seal Brow Stamp Kit</h3>
+          <p class="pc-desc">Stamp on symmetrical, natural-looking brows in 10 seconds.</p>
+          <div class="pc-foot"><span class="pc-cta">Shop Stamp — $39.99 <del>$59.99</del></span></div>
         </div>
       </a>
-
-      <!-- Brow Pencil (NEW) -->
-      <a class="card product-card" href="pencil.html">
+      <a class="product-card" href="pencil.html" data-cat="all new pencil">
         <div class="media">
-          <span class="flag gold">New</span>
-          <img data-shopify-handle="waterproof-dual-ended-eyebrow-pencil" src="https://cdn.shopify.com/s/files/1/1010/2482/5658/files/dbf2a140-4382-43d4-bc5b-7d801499c621.jpg?v=1784046043" alt="GECOMO Waterproof Dual-Ended Eyebrow Pencil">
+          <img data-shopify-handle="waterproof-eyebrow-pencil" data-shopify-index="0" alt="GECOMO waterproof dual-ended brow pencil">
+          <span class="flag">New</span>
         </div>
         <div class="pc-body">
-          <div class="pc-eyebrow">Dual-Ended</div>
-          <h3>Waterproof Brow Pencil</h3>
-          <p class="pc-desc">A 4D micro-carved tip draws fine, hair-like strokes, with a spoolie to blend. Waterproof, smudge-proof, and doubles as eyeliner.</p>
           <div class="pc-stars">★★★★★ <span>4.9 · new</span></div>
-          <div class="pc-foot">
-            <div class="pc-price">$29.99 <del>$44.99</del></div>
-            <span class="pc-cta">Shop pencil</span>
-          </div>
+          <h3>Waterproof Brow Pencil</h3>
+          <p class="pc-desc">A 4D micro-carved tip that draws fine, hair-like strokes.</p>
+          <div class="pc-foot"><span class="pc-cta">Shop Pencil — $29.99 <del>$44.99</del></span></div>
         </div>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- Category tiles -->
+<section id="cats">
+  <div class="section-head">
+    <h2>Brow Essentials, Simplified</h2>
+  </div>
+  <div class="cat-grid">
+    <a class="cat-tile media-slot" data-file="assets/media/cat-bestsellers.jpg" href="#collection">
+      <img src="assets/media/cat-bestsellers.jpg" alt="Bestsellers" loading="lazy" onerror="this.classList.add('media-missing')">
+      <span class="label">Bestsellers</span>
+    </a>
+    <a class="cat-tile media-slot" data-file="assets/media/cat-stamp.jpg" href="stamp.html">
+      <img src="assets/media/cat-stamp.jpg" alt="Brow Stamp" loading="lazy" onerror="this.classList.add('media-missing')">
+      <span class="label">Brow Stamp</span>
+    </a>
+    <a class="cat-tile media-slot" data-file="assets/media/cat-pencil.jpg" href="pencil.html">
+      <img src="assets/media/cat-pencil.jpg" alt="Brow Pencil" loading="lazy" onerror="this.classList.add('media-missing')">
+      <span class="label">Brow Pencil</span>
+    </a>
+    <a class="cat-tile media-slot" data-file="assets/media/cat-guide.jpg" href="stamp.html#guide">
+      <img src="assets/media/cat-guide.jpg" alt="Free Brow Playbook" loading="lazy" onerror="this.classList.add('media-missing')">
+      <span class="label">Free Guide</span>
+    </a>
+  </div>
+</section>
+
+<!-- Shoppable video strip — drop UGC clips into assets/media/ugc1.mp4 … ugc5.mp4 -->
+<section id="ugc">
+  <div class="section-head">
+    <p class="eyebrow">#GECOMO</p>
+    <h2>Seen on real brows</h2>
+    <p>Real routines, real mornings — tap a clip to shop what they're wearing.</p>
+  </div>
+  <div class="ugc-strip">
+    <div class="ugc-tile media-slot" data-file="assets/media/ugc1.mp4">
+      <video src="assets/media/ugc1.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
+      <a class="ugc-chip" href="stamp.html"><span class="t">Double Seal Brow Stamp</span><span class="p">$39.99 →</span></a>
+    </div>
+    <div class="ugc-tile media-slot" data-file="assets/media/ugc2.mp4">
+      <video src="assets/media/ugc2.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
+      <a class="ugc-chip" href="pencil.html"><span class="t">Waterproof Brow Pencil</span><span class="p">$29.99 →</span></a>
+    </div>
+    <div class="ugc-tile media-slot" data-file="assets/media/ugc3.mp4">
+      <video src="assets/media/ugc3.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
+      <a class="ugc-chip" href="stamp.html"><span class="t">Double Seal Brow Stamp</span><span class="p">$39.99 →</span></a>
+    </div>
+    <div class="ugc-tile media-slot" data-file="assets/media/ugc4.mp4">
+      <video src="assets/media/ugc4.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
+      <a class="ugc-chip" href="pencil.html"><span class="t">Waterproof Brow Pencil</span><span class="p">$29.99 →</span></a>
+    </div>
+    <div class="ugc-tile media-slot" data-file="assets/media/ugc5.mp4">
+      <video src="assets/media/ugc5.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
+      <a class="ugc-chip" href="stamp.html"><span class="t">Double Seal Brow Stamp</span><span class="p">$39.99 →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Latest launch editorial band -->
+<section id="launch">
+  <div class="launch-head">
+    <h2>Our Latest Launch</h2>
+  </div>
+  <div class="launch-media">
+    <div class="media-frame media-slot" data-file="assets/media/home-launch.jpg" style="position:relative;overflow:hidden;">
+      <img src="assets/media/home-launch.jpg" alt="GECOMO Waterproof Brow Pencil launch" loading="lazy" onerror="this.classList.add('media-missing')">
+    </div>
+    <div class="launch-cap">
+      <h3>The Waterproof Brow Pencil</h3>
+      <p>A 4D micro-carved tip for hair-like strokes that stay put from morning swim to last light.</p>
+      <a href="pencil.html" class="btn btn-ghost">Shop the pencil</a>
     </div>
   </div>
 </section>
@@ -134,42 +203,11 @@
   </div>
 </section>
 
-<!-- Shoppable video strip — drop UGC clips into assets/media/ugc1.mp4 … ugc5.mp4 -->
-<section id="ugc">
-  <div class="section-head">
-    <p class="eyebrow">#GECOMO</p>
-    <h2>Seen on real brows</h2>
-    <p>Real routines, real mornings — tap a clip to shop what they're wearing.</p>
-  </div>
-  <div class="ugc-strip">
-    <div class="ugc-tile media-slot" data-file="assets/media/ugc1.mp4">
-      <video src="assets/media/ugc1.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
-      <a class="ugc-chip" href="stamp.html"><span class="t">Double Seal Brow Stamp</span><span class="p">$39.99 →</span></a>
-    </div>
-    <div class="ugc-tile media-slot" data-file="assets/media/ugc2.mp4">
-      <video src="assets/media/ugc2.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
-      <a class="ugc-chip" href="pencil.html"><span class="t">Waterproof Brow Pencil</span><span class="p">$29.99 →</span></a>
-    </div>
-    <div class="ugc-tile media-slot" data-file="assets/media/ugc3.mp4">
-      <video src="assets/media/ugc3.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
-      <a class="ugc-chip" href="stamp.html"><span class="t">Double Seal Brow Stamp</span><span class="p">$39.99 →</span></a>
-    </div>
-    <div class="ugc-tile media-slot" data-file="assets/media/ugc4.mp4">
-      <video src="assets/media/ugc4.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
-      <a class="ugc-chip" href="pencil.html"><span class="t">Waterproof Brow Pencil</span><span class="p">$29.99 →</span></a>
-    </div>
-    <div class="ugc-tile media-slot" data-file="assets/media/ugc5.mp4">
-      <video src="assets/media/ugc5.mp4" autoplay muted loop playsinline onerror="this.classList.add('media-missing')"></video>
-      <a class="ugc-chip" href="stamp.html"><span class="t">Double Seal Brow Stamp</span><span class="p">$39.99 →</span></a>
-    </div>
-  </div>
-</section>
-
 <!-- Reviews -->
 <section id="reviews">
   <div class="reviews-head">
     <p class="eyebrow">Reviews</p>
-    <h2 style="font-size:clamp(30px,4vw,42px);">Loved by thousands of brows.</h2>
+    <h2 style="font-size:clamp(34px,4.4vw,56px);">Loved by thousands of brows.</h2>
     <div class="stars-lg" style="margin-top:14px;">★★★★★</div>
   </div>
   <div class="review-grid">
@@ -204,21 +242,61 @@
 <section id="guarantee">
   <h2>Love your brows or it's free.</h2>
   <p>Try any GECOMO product for 60 days. If it doesn't give you fuller, more natural brows in less time, send it back — even used — for a full refund.</p>
-  <a href="#collection" class="btn btn-gold">Shop the collection</a>
+  <a href="#collection" class="btn btn-ghost">Shop the collection</a>
 </section>
 
 <footer>
-  <a href="index.html" class="logo">GECOMO</a>
-  <div class="foot-links">
-    <a href="index.html">Shop</a>
-    <a href="stamp.html">Brow Stamp</a>
-    <a href="pencil.html">Brow Pencil</a>
-    <a href="track.html">Track Order</a>
+  <div class="foot-grid">
+    <div class="foot-news">
+      <a href="index.html" class="logo">GECOMO</a>
+      <h4>Get 15% off your first order</h4>
+      <form class="news-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Done ✓';">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit">Sign up →</button>
+      </form>
+    </div>
+    <div class="foot-col">
+      <h5>Shop</h5>
+      <a href="index.html#collection">Shop All</a>
+      <a href="stamp.html">Brow Stamp</a>
+      <a href="pencil.html">Brow Pencil</a>
+      <a href="stamp.html#guide">Free Brow Playbook</a>
+    </div>
+    <div class="foot-col">
+      <h5>Support</h5>
+      <a href="track.html">Track Order</a>
+      <a href="stamp.html#faq">FAQ</a>
+      <a href="index.html#guarantee">60-Day Guarantee</a>
+      <a href="mailto:hello@gecomo.com">Contact Us</a>
+    </div>
+    <div class="foot-col">
+      <h5>About</h5>
+      <a href="index.html#ethos">Our Ethos</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#ugc">#GECOMO</a>
+    </div>
   </div>
   <p class="copyright">© 2026 GECOMO. All rights reserved.</p>
 </footer>
 
 <script src="assets/shopify.js?v=3"></script>
 <script src="assets/cart.js?v=3"></script>
+<script>
+// Curated Favorites tab filter
+(function(){
+  var tabs = document.querySelectorAll('#favTabs a[data-filter]');
+  var cards = document.querySelectorAll('#collection .product-card');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      tab.classList.add('active');
+      var f = tab.getAttribute('data-filter');
+      cards.forEach(function(c){
+        c.style.display = (f === 'all' || (c.getAttribute('data-cat') || '').split(' ').indexOf(f) !== -1) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
