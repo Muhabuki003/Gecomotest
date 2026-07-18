@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GECOMO Hydrating Retinol Serum — Firm, Glow, Smooth</title>
+<meta name="description" content="GECOMO Hydrating Retinol Serum — a gentle yet effective retinol formula with hyaluronic acid and niacinamide. Smooths fine lines, evens tone, hydrates deeply. Cruelty-free, 60-day guarantee.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23FAF6F1'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%231C1712'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+
+<div id="saleBar">Summer Sale — ends in <strong id="cd-h">--</strong>:<strong id="cd-m">--</strong>:<strong id="cd-s">--</strong></div>
+
+<header class="site-head">
+  <div class="masthead">
+    <div class="mast-side left"><a href="track.html">Track Order</a></div>
+    <a href="index.html" class="logo">GECOMO</a>
+    <div class="mast-side right"><button id="cartBtn" type="button">Cart · <span id="cartCount">0</span></button></div>
+  </div>
+  <nav class="navrow">
+    <a href="index.html">Shop All</a>
+    <a href="index.html#bestsellers">Bestsellers</a>
+    <a href="stamp.html">Brow Stamp</a>
+    <a href="pencil.html">Brow Pencil</a>
+    <a href="serum.html" class="active">Retinol Serum</a>
+    <a href="track.html">Track Order</a>
+  </nav>
+</header>
+
+<div id="tagline">Your skin. Renewed.</div>
+
+<!-- Hero -->
+<header id="top" class="pdp-hero">
+  <img class="bg" src="assets/media/serum-hero.jpg" alt="">
+  <div class="scrim"></div>
+  <div class="hero-copy">
+    <div class="hero-badge">★★★★★ &nbsp;NEW — just launched</div>
+    <h1>Retinol that hydrates. Skin that glows.</h1>
+    <p>A gentle, hydrating retinol serum with hyaluronic acid and niacinamide — smooth fine lines, even tone, and restore your glow without the irritation.</p>
+    <div class="hero-cta">
+      <a href="#buy" class="btn btn-gold">Shop the serum — <span id="heroPrice">$34.99</span></a>
+      <span>Ships within 24h · Cruelty-free</span>
+    </div>
+  </div>
+</header>
+
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>Hydrating retinol formula</span><span>·</span><span>Hyaluronic acid + niacinamide</span><span>·</span><span>Soothes &amp; smooths</span><span>·</span><span>Fine lines &amp; uneven tone</span><span>·</span><span>60-day guarantee</span><span>·</span>
+    <span>Hydrating retinol formula</span><span>·</span><span>Hyaluronic acid + niacinamide</span><span>·</span><span>Soothes &amp; smooths</span><span>·</span><span>Fine lines &amp; uneven tone</span><span>·</span><span>60-day guarantee</span><span>·</span>
+  </div>
+</div>
+
+<!-- Buy section -->
+<section id="buy">
+  <div class="wrap buy-grid">
+    <div class="buy-media">
+      <div class="card">
+        <img id="mainImg" src="assets/media/serum-main-branded.jpg" alt="GECOMO Hydrating Retinol Serum">
+      </div>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+
+    <div class="buy-content">
+      <div class="eyebrow">GECOMO · Hydrating Retinol</div>
+      <h1 class="pdp-title">Hydrating Retinol Serum</h1>
+
+      <ul class="feature-list">
+        <li>✨ <span><b>Encapsulated retinol</b> — gentle, time-released for minimal irritation</span></li>
+        <li>💧 <span><b>Hyaluronic acid</b> — deep hydration that plumps and smooths</span></li>
+        <li>🌟 <span><b>Niacinamide (Vitamin B3)</b> — evens tone, reduces redness</span></li>
+        <li>✅ <span><b>All skin types</b> — fragrance-free, cruelty-free, paraben-free</span></li>
+      </ul>
+
+      <div class="divider-label">Limited time offer</div>
+
+      <div id="bundleList"></div>
+
+      <div class="protection">
+        <input type="checkbox" id="protection">
+        <label for="protection">Add Shipping Protection — <strong>$1.98</strong> (covers lost or damaged packages)</label>
+      </div>
+
+      <button id="addToCart" class="btn btn-gold" type="button">Add to cart — <span id="atcPrice">$34.99</span></button>
+      <div class="guarantee-row">
+        <span>✓ 60-day guarantee</span>
+        <span>✓ Ships in 24h</span>
+        <span>✓ Secure checkout</span>
+      </div>
+      <p id="liveNote" style="display:none;margin:14px 0 0;font-size:13px;color:var(--brown);text-align:center;"></p>
+
+      <div class="mini-carousel">
+        <div class="avatar" id="mcAvatar">J</div>
+        <div class="mini-carousel-text">
+          <q id="mcQuote">I was nervous about retinol, but this is so gentle. My skin looks brighter and feels so smooth — no redness at all.</q>
+          <div class="mini-carousel-name" id="mcName">Jamie T. · ★★★★★</div>
+          <div class="dots" id="mcDots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Demo -->
+<section id="demo">
+  <div class="card">
+    <img class="demo-img" src="assets/media/serum-detail-branded.jpg" alt="GECOMO Hydrating Retinol Serum texture and application">
+  </div>
+  <div class="copy">
+    <div class="eyebrow">See the difference</div>
+    <h2>Retinol reimagined. Hydration first. ✨</h2>
+    <p style="color:var(--body);line-height:1.7;margin-top:14px;">Our encapsulated retinol releases gradually into the skin, minimizing irritation while maximizing results. Paired with hyaluronic acid for deep hydration and niacinamide to calm and brighten, it's retinol the way it should be — effective but gentle.</p>
+    <div class="stat-row">
+      <div class="stat"><b>2%</b><span>Encapsulated retinol</span></div>
+      <div class="stat"><b>5%</b><span>Niacinamide complex</span></div>
+      <div class="stat"><b>60 day</b><span>Money-back guarantee</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="how" class="wrap" style="padding:20px 28px 88px;text-align:center;">
+  <p class="eyebrow">How it works</p>
+  <h2 style="font-size:clamp(30px,4vw,42px);margin:0 0 48px;">Three steps to renewed skin.</h2>
+  <div class="how-grid">
+    <div class="card">
+      <div class="step-n">STEP 01</div>
+      <h3>Cleanse &amp; dry</h3>
+      <p>Start with clean, dry skin. Pat your face dry with a clean towel — retinol absorbs best on bare skin.</p>
+    </div>
+    <div class="card">
+      <div class="step-n">STEP 02</div>
+      <h3>Apply &amp; absorb</h3>
+      <p>Dispense 2–3 drops onto fingertips and gently press into face and neck. Avoid the eye area. Use once daily, preferably at night.</p>
+    </div>
+    <div class="card">
+      <div class="step-n">STEP 03</div>
+      <h3>Moisturize &amp; protect</h3>
+      <p>Follow with your favorite moisturizer. In the morning, always apply SPF — retinol increases sun sensitivity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Before/After placeholder -->
+<section id="results" class="wrap" style="padding:60px 28px 80px;text-align:center;">
+  <p class="eyebrow">Real results</p>
+  <h2 style="font-size:clamp(28px,3.5vw,38px);margin-bottom:14px;">Your glow starts here.</h2>
+  <p style="color:var(--body);max-width:560px;margin:0 auto 40px;">Consistent use delivers visible improvements. Most users report smoother texture in 2 weeks, brighter tone in 4 weeks.</p>
+  <div class="how-grid" style="max-width:800px;margin:0 auto;">
+    <div class="card">
+      <h3>Week 1-2</h3>
+      <p>Skin begins to feel smoother and more hydrated. Some may experience mild purging as skin adjusts.</p>
+    </div>
+    <div class="card">
+      <h3>Week 3-4</h3>
+      <p>Fine lines appear softened. Skin tone looks more even and radiant. Texture continues to improve.</p>
+    </div>
+    <div class="card">
+      <h3>Week 6+</h3>
+      <p>Full results visible — smoother texture, reduced fine lines, brighter, more even complexion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Ingredients accordion -->
+<section id="included" style="padding:60px 28px;">
+  <h2 style="text-align:center;font-size:clamp(24px,3vw,32px);margin-bottom:32px;">What's inside</h2>
+  <div class="acc-item">
+    <details open>
+      <summary><span class="summary-left">🧪 Key Ingredients</span><span class="chev">⌄</span></summary>
+      <div class="body">
+        <p><strong>Encapsulated Retinol (2%)</strong> — time-released vitamin A derivative that gently accelerates cell turnover, reducing fine lines and improving texture without the irritation of traditional retinol.</p>
+        <p style="margin-top:10px;"><strong>Hyaluronic Acid</strong> — holds up to 1,000x its weight in water, delivering deep, lasting hydration that plumps and smooths the skin.</p>
+        <p style="margin-top:10px;"><strong>Niacinamide (5%)</strong> — vitamin B3 that calms redness, evens skin tone, strengthens the skin barrier, and minimizes the look of pores.</p>
+        <p style="margin-top:10px;"><strong>Ceramides</strong> — lipid molecules that reinforce the skin's natural barrier, locking in moisture and protecting against environmental stressors.</p>
+      </div>
+    </details>
+  </div>
+  <div class="acc-item">
+    <details>
+      <summary><span class="summary-left">❓ How to use</span><span class="chev">⌄</span></summary>
+      <div class="body">Apply 2–3 drops to clean, dry skin each evening. Gently press into face and neck, avoiding the eye area. Follow with moisturizer. Use SPF 30+ every morning — retinol increases sun sensitivity. Start with every other night if you have sensitive skin, then increase to nightly use as your skin adjusts.</div>
+    </details>
+  </div>
+  <div class="acc-item">
+    <details>
+      <summary><span class="summary-left">🚚 Shipping &amp; guarantee</span><span class="chev">⌄</span></summary>
+      <div class="body">Orders ship within 24 hours. Every serum is backed by a 60-day money-back guarantee — if you don't see results, send it back for a full refund. No questions asked.</div>
+    </details>
+  </div>
+</section>
+
+<div class="info-banner">
+  <span>📦 Ships within 24h</span>
+  <span>🌿 Cruelty-free</span>
+  <span>🔒 60-day guarantee</span>
+</div>
+
+<!-- Full-width editorial image -->
+<section class="editorial-band">
+  <div class="frame">
+    <img src="assets/media/serum-editorial-branded.jpg" alt="GECOMO Hydrating Retinol Serum — renewed, glowing skin">
+    <div class="scrim"></div>
+    <div class="cap">
+      <h3>Retinol that cares</h3>
+      <p>Encapsulated for gradual release. Hydrating for comfortable wear. Effective for real results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews">
+  <div class="reviews-head">
+    <p class="eyebrow">Reviews</p>
+    <h2 style="font-size:clamp(30px,4vw,42px);">Glowing reviews, glowing skin.</h2>
+    <div class="stars-lg" style="margin-top:14px;">★★★★★</div>
+    <button id="writeReview" type="button">Write a review</button>
+  </div>
+  <div class="review-grid" id="reviewGrid"></div>
+</section>
+
+<!-- Guarantee -->
+<section id="guarantee">
+  <h2>Love your skin or it's free.</h2>
+  <p>Try the GECOMO Hydrating Retinol Serum for 60 days. If it doesn't smooth, hydrate, and brighten your skin, send it back for a full refund.</p>
+  <a href="#buy" class="btn btn-gold">Try it risk-free</a>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2>Questions, answered.</h2>
+
+  <div class="faq-item">
+    <details>
+      <summary>Is this safe for sensitive skin?<span class="chev">⌄</span></summary>
+      <div class="body">Yes — our encapsulated retinol is designed for gradual release, which significantly reduces the irritation associated with traditional retinol. We recommend starting with every other night and building up to nightly use. Combined with hyaluronic acid and niacinamide, this formula soothes while it works.</div>
+    </details>
+  </div>
+  <div class="faq-item">
+    <details>
+      <summary>Can I use this with other active ingredients?<span class="chev">⌄</span></summary>
+      <div class="body">For best results, use this serum in your evening routine and avoid layering with other strong actives like AHAs, BHAs, or high-concentration vitamin C on the same night. If you use both, alternate nights. Always follow with moisturizer and morning SPF.</div>
+    </details>
+  </div>
+  <div class="faq-item">
+    <details>
+      <summary>How long until I see results?<span class="chev">⌄</span></summary>
+      <div class="body">Most users notice smoother, more hydrated skin within 1–2 weeks. Fine lines and uneven tone typically show visible improvement around 4 weeks, with continued improvement over 6–8 weeks of consistent use.</div>
+    </details>
+  </div>
+  <div class="faq-item">
+    <details>
+      <summary>Can I use this while pregnant or nursing?<span class="chev">⌄</span></summary>
+      <div class="body">We recommend consulting your healthcare provider before using any retinol product during pregnancy or while nursing. While encapsulated retinol is gentler, it's always best to get medical guidance.</div>
+    </details>
+  </div>
+  <div class="faq-item">
+    <details>
+      <summary>Is it cruelty-free?<span class="chev">⌄</span></summary>
+      <div class="body">Yes — GECOMO products are 100% cruelty-free. We never test on animals.</div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-news">
+      <a href="index.html" class="logo">GECOMO</a>
+      <h4>Get 15% off your first order</h4>
+      <form class="news-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Done ✓';">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit">Sign up →</button>
+      </form>
+    </div>
+    <div class="foot-col">
+      <h5>Shop</h5>
+      <a href="index.html#collection">Shop All</a>
+      <a href="stamp.html">Brow Stamp</a>
+      <a href="pencil.html">Brow Pencil</a>
+      <a href="serum.html">Retinol Serum</a>
+    </div>
+    <div class="foot-col">
+      <h5>Support</h5>
+      <a href="track.html">Track Order</a>
+      <a href="serum.html#faq">FAQ</a>
+      <a href="serum.html#guarantee">60-Day Guarantee</a>
+      <a href="/cdn-cgi/l/email-protection#a5cdc0c9c9cae5c2c0c6cac8ca8bc6cac8">Contact Us</a>
+    </div>
+    <div class="foot-col">
+      <h5>About</h5>
+      <a href="index.html#ethos">Our Ethos</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#ugc">#GECOMO</a>
+    </div>
+  </div>
+  <p class="copyright">© 2026 GECOMO. All rights reserved.</p>
+</footer>
+
+<!-- Sticky add-to-cart bar -->
+<div id="stickyBar">
+  <span class="info">Hydrating Retinol Serum · <strong id="stickyPrice">$34.99</strong><del id="stickyCompare">$49.99</del></span>
+  <button id="stickyAdd" type="button">Add to cart</button>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/shopify.js?v=3"></script>
+<script src="assets/cart.js?v=3"></script>
+<script>
+(function(){
+  "use strict";
+
+  var CONFIG = { productHandle: 'hydrating-retinol-serum' };
+
+  var PRODUCT_IMAGE = 'assets/media/serum-main-branded.jpg';
+  var PRODUCT_TITLE = 'Hydrating Retinol Serum';
+
+  var gallery = [
+    'assets/media/serum-main-branded.jpg',
+    'assets/media/serum-detail-branded.jpg',
+    'assets/media/serum-editorial-branded.jpg',
+    'assets/media/serum-hero.jpg'
+  ];
+
+  var SALE_END = new Date('2026-07-31T23:59:59-05:00').getTime();
+
+  var SHADES = [
+    { name: '30ml / 1 fl oz', hex: '#C9A87C', desc: 'Full-size bottle — 1-2 month supply',
+      variantId: 'gid://shopify/ProductVariant/PLACEHOLDER_TODO' }
+  ];
+
+  var BUNDLES = [
+    { qty: 1, price: 34.99, compare: 49.99, title: '1 Bottle', badge: null, freeShipping: false },
+    { qty: 2, price: 59.99, compare: 99.98, title: '2 Bottles', badge: 'Most Popular', freeShipping: true },
+    { qty: 3, price: 79.99, compare: 149.97, title: '3 Bottles', badge: 'Best Value', freeShipping: true }
+  ];
+
+  var GUIDE_VALUE = 0;
+  var PROTECTION_PRICE = 1.98;
+
+  var REVIEWS = [
+    { name: 'Jamie T.', stars: 5, date: 'Jul 15, 2026', text: "I was nervous about retinol, but this is so gentle. My skin looks brighter and feels so smooth — no redness at all.", media: '' },
+    { name: 'Kendra L.', stars: 5, date: 'Jul 12, 2026', text: "Three weeks in and my fine lines around my eyes are noticeably softer. The hydration is incredible — my dry patches are gone.", media: '' },
+    { name: 'Maya R.', stars: 4, date: 'Jul 8, 2026', text: "Started every other night as recommended, zero irritation. My skin tone is more even already. Will definitely repurchase.", media: '' },
+    { name: 'Sophia D.', stars: 5, date: 'Jul 5, 2026', text: "This is my first retinol and I'm so glad I started with this one. No peeling, no redness — just smooth, glowing skin.", media: '' }
+  ];
+
+  var state = { bundle: 0, protection: false, live: null, image: PRODUCT_IMAGE };
+
+  function fmt(n){ return '$' + n.toFixed(2); }
+
+  function bundleInfo(idx){
+    var b = BUNDLES[idx];
+    var p = state.live ? parseFloat(state.live.price) : b.price;
+    var c = state.live ? parseFloat(state.live.compareAt) : b.compare;
+    var discounted = idx === 0 ? p : (p * b.qty * (1 - [0, 0.15, 0.24][idx]));
+    return {
+      title: b.title,
+      price: discounted,
+      list: c * b.qty,
+      badge: b.badge,
+      freeShipping: b.freeShipping
+    };
+  }
+
+  function renderBundles(sel){
+    sel.innerHTML = '';
+    BUNDLES.forEach(function(b, i){
+      var info = bundleInfo(i);
+      var div = document.createElement('div');
+      div.className = 'bundle-option' + (i === state.bundle ? ' selected' : '');
+      div.innerHTML =
+        '<div class="bo-left">' +
+          '<span class="bo-qty">' + b.title + '</span>' +
+          (b.badge ? '<span class="bo-badge">' + b.badge + '</span>' : '') +
+          (info.list > info.price ? '<span class="bo-list"><del>' + fmt(info.list) + '</del></span>' : '') +
+        '</div>' +
+        '<div class="bo-right">' +
+          '<span class="bo-price">' + fmt(info.price) + '</span>' +
+          (info.freeShipping ? '<span class="bo-fs">Free shipping</span>' : '') +
+        '</div>';
+      div.addEventListener('click', function(){ selectBundle(i); });
+      sel.appendChild(div);
+    });
+  }
+
+  function selectBundle(i){
+    state.bundle = i;
+    updateUI();
+  }
+
+  function updateUI(){
+    var info = bundleInfo(state.bundle);
+    var total = info.price + (state.protection ? PROTECTION_PRICE : 0);
+    document.getElementById('atcPrice').textContent = fmt(total);
+    document.getElementById('heroPrice').textContent = fmt(info.price);
+    document.getElementById('stickyPrice').textContent = fmt(info.price);
+    document.getElementById('stickyCompare').textContent = fmt(info.list);
+    document.querySelectorAll('.bundle-option').forEach(function(el, i){
+      el.classList.toggle('selected', i === state.bundle);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    renderBundles(document.getElementById('bundleList'));
+    updateUI();
+
+    document.getElementById('protection').addEventListener('change', function(){
+      state.protection = this.checked;
+      updateUI();
+    });
+
+    document.getElementById('addToCart').addEventListener('click', function(){
+      if (typeof GecomoCart !== 'undefined') {
+        var info = bundleInfo(state.bundle);
+        GecomoCart.add({
+          title: PRODUCT_TITLE,
+          image: state.image,
+          meta: info.title,
+          price: info.price,
+          lines: [{ variantId: SHADES[0].variantId, qty: info.title.startsWith('1') ? 1 : info.title.startsWith('2') ? 2 : 3 }]
+        });
+      }
+    });
+
+    document.getElementById('stickyAdd').addEventListener('click', function(){
+      document.getElementById('addToCart').click();
+    });
+
+    // Mini carousel
+    var mc = [
+      { q: "I was nervous about retinol, but this is so gentle. My skin looks brighter.", n: "Jamie T.", a: "J" },
+      { q: "Three weeks in and my fine lines are noticeably softer. The hydration is incredible.", n: "Kendra L.", a: "K" },
+      { q: "Started every other night as recommended, zero irritation. Skin tone is more even.", n: "Maya R.", a: "M" }
+    ];
+    var mci = 0;
+    setInterval(function(){
+      mci = (mci + 1) % mc.length;
+      var r = mc[mci];
+      document.getElementById('mcQuote').textContent = r.q;
+      document.getElementById('mcName').textContent = r.n + ' · ★★★★★';
+      document.getElementById('mcAvatar').textContent = r.a;
+    }, 5000);
+  });
+})();
+</script>
+</body>
+</html>
